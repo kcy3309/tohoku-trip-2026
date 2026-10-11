@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本東北紅葉自駕遊 2026｜行程手帳</title>
+<meta name="description" content="2026/10/20–10/31 日本東北 12 天自駕紅葉行程：每日時間軸、互動地圖、費用、景點餐廳與安全提醒。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+/* ============ theme tokens ============ */
+:root{
+  --paper:#faf4e8; --paper2:#f3ead7; --card:#fffdf7; --ink:#2b2620; --ink2:#5c5347;
+  --line:#e5d9c3; --line2:#d8c9ab;
+  --momiji:#b4322a; --momiji2:#d94f30; --amber:#d97706; --ginkgo:#e0a526;
+  --moss:#6b7f4e; --seal:#c73e3a; --shadow:rgba(80,50,20,.14);
+  --risk-low:#5e7a46; --risk-mid:#d97706; --risk-high:#b4322a;
+  --nav-bg:rgba(250,244,232,.92);
+  --map-tint:none;
+}
+[data-theme="dark"]{
+  --paper:#1c1917; --paper2:#241f1b; --card:#2a2420; --ink:#f0e7d8; --ink2:#c4b8a6;
+  --line:#453b30; --line2:#5a4d3d;
+  --momiji:#e05a45; --momiji2:#ff7a52; --amber:#f59e0b; --ginkgo:#fbbf24;
+  --moss:#9aae74; --seal:#e05545; --shadow:rgba(0,0,0,.5);
+  --risk-low:#9aae74; --risk-mid:#f59e0b; --risk-high:#ff7a52;
+  --nav-bg:rgba(28,25,23,.92);
+  --map-tint:sepia(.25) saturate(.9) brightness(.85);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:"Noto Serif TC","Zen Old Mincho",serif;
+  background:var(--paper); color:var(--ink); line-height:1.7;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(180,50,42,.05), transparent 34%),
+    radial-gradient(circle at 88% 8%, rgba(224,165,38,.07), transparent 30%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+  transition:background .35s,color .35s;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+a{color:var(--momiji)}
+/* ============ nav ============ */
+header.nav{
+  position:sticky;top:0;z-index:900;background:var(--nav-bg);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;gap:14px;max-width:1080px;margin:0 auto;padding:10px 20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:8px;font-weight:900;font-size:1.02rem;white-space:nowrap}
+.brand svg{width:26px;height:26px;flex:none}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{
+  text-decoration:none;color:var(--ink2);padding:6px 11px;border-radius:20px;
+  font-size:.88rem;white-space:nowrap;border:1px solid transparent;transition:.2s;
+}
+nav.tabs a:hover{color:var(--momiji);background:color-mix(in srgb,var(--momiji) 10%,transparent)}
+nav.tabs a.on{color:#fff;background:var(--momiji);border-color:var(--momiji)}
+[data-theme="dark"] nav.tabs a.on{color:#1c1917}
+#themeBtn{
+  border:1px solid var(--line2);background:var(--card);color:var(--ink);
+  border-radius:20px;padding:6px 12px;cursor:pointer;font-size:1rem;font-family:inherit;
+  display:flex;align-items:center;gap:6px;transition:.2s;flex:none;
+}
+#themeBtn:hover{border-color:var(--momiji);color:var(--momiji)}
+/* ============ hero ============ */
+.hero{padding:44px 0 26px;position:relative;overflow:hidden}
+.hero h1{font-family:"Zen Old Mincho",serif;font-size:clamp(1.7rem,4.4vw,2.7rem);margin:0 0 6px;letter-spacing:.04em}
+.hero h1 .koyo{color:var(--momiji)}
+.hero .sub{color:var(--ink2);font-size:1rem;margin:0 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  background:var(--card);border:1px solid var(--line2);border-radius:22px;
+  padding:5px 13px;font-size:.83rem;color:var(--ink2);
+}
+.chip b{color:var(--ink);font-weight:700}
+.chip.red{border-color:color-mix(in srgb,var(--momiji) 45%,var(--line));color:var(--momiji)}
+.hero-leaf{position:absolute;right:-14px;top:6px;opacity:.16;width:190px;pointer-events:none}
+[data-theme="dark"] .hero-leaf{opacity:.2}
+/* ============ section ============ */
+section{padding:30px 0 14px;scroll-margin-top:70px}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin:6px 0 18px;flex-wrap:wrap}
+.sec-head h2{font-family:"Zen Old Mincho",serif;font-size:1.55rem;margin:0;display:flex;align-items:center;gap:10px}
+.sec-head h2::before{content:"";width:9px;height:26px;background:linear-gradient(var(--momiji),var(--ginkgo));border-radius:3px;display:inline-block}
+.sec-head .en{color:var(--ink2);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.rule{height:3px;background:linear-gradient(90deg,var(--momiji),var(--ginkgo) 55%,transparent);border-radius:2px;margin:0 0 20px;position:relative}
+.rule::after{content:"";position:absolute;left:0;top:0;height:100%;width:2px;background:var(--ink);opacity:.25}
+/* ============ cards / tables ============ */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 2px 10px var(--shadow)}
+.grid{display:grid;gap:14px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper2);font-weight:700;color:var(--ink)}
+tbody tr:hover{background:color-mix(in srgb,var(--ginkgo) 8%,transparent)}
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--line);background:var(--card)}
+.tbl-wrap table{border:none;min-width:640px}
+.tbl-wrap th,.tbl-wrap td{border-left:none}
+.tbl-wrap th:first-child,.tbl-wrap td:first-child{border-left:none}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.money{color:var(--amber);font-weight:700}
+/* ============ overview ============ */
+.ov-route{font-weight:700}
+.meal{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:10px;margin:1px 2px 1px 0;border:1px solid}
+.meal.b{color:var(--ginkgo);border-color:var(--ginkgo)}
+.meal.l{color:var(--amber);border-color:var(--amber)}
+.meal.d{color:var(--momiji);border-color:var(--momiji)}
+.decisions{list-style:none;padding:0;margin:14px 0 0}
+.decisions li{padding:9px 12px 9px 34px;border-left:3px solid var(--momiji);background:var(--card);margin-bottom:8px;border-radius:0 10px 10px 0;position:relative;font-size:.9rem}
+.decisions li::before{content:"紅";position:absolute;left:10px;top:9px;color:var(--momiji);font-size:.72rem;font-weight:900;border:1.5px solid var(--momiji);border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;line-height:1}
+/* ============ day cards ============ */
+.day{margin-bottom:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden;box-shadow:0 2px 12px var(--shadow)}
+.day summary{
+  list-style:none;cursor:pointer;padding:15px 18px;display:flex;gap:14px;align-items:center;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--momiji) 9%,var(--card)),var(--card));
+  border-bottom:1px solid transparent;transition:.2s;
+}
+.day summary::-webkit-details-marker{display:none}
+.day[open] summary{border-bottom-color:var(--line)}
+.seal{
+  flex:none;width:46px;height:46px;border-radius:9px;background:var(--seal);color:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:"Zen Old Mincho",serif;font-weight:900;line-height:1.05;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.35),0 2px 5px var(--shadow);
+}
+.seal small{font-size:.5rem;letter-spacing:.1em;opacity:.9}
+.seal span{font-size:1.15rem}
+.day-sum{flex:1;min-width:0}
+.day-sum h3{margin:0;font-size:1.02rem;font-family:"Zen Old Mincho",serif;color:var(--ink)}
+.day-sum p{margin:2px 0 0;color:var(--ink2);font-size:.83rem}
+.day-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px}
+.tag{font-size:.72rem;padding:2px 9px;border-radius:12px;border:1px solid var(--line2);color:var(--ink2);background:var(--paper)}
+.tag.drive{color:var(--moss);border-color:var(--moss)}
+.warn{color:var(--risk-high);border-color:var(--risk-high)}
+.chev{flex:none;color:var(--ink2);transition:transform .25s}
+.day[open] .chev{transform:rotate(90deg)}
+.day-body{padding:14px 18px 18px}
+.warnbox{background:color-mix(in srgb,var(--momiji) 7%,var(--card));border:1px dashed var(--momiji);border-radius:10px;padding:10px 12px;font-size:.84rem;margin:0 0 12px;color:var(--ink)}
+.warnbox b{color:var(--momiji)}
+/* timeline items */
+.tl{position:relative;padding-left:22px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--ginkgo),var(--momiji));opacity:.5;border-radius:2px}
+.it{position:relative;margin:0 0 4px;padding:8px 10px 8px 12px;border-radius:10px}
+.it:hover{background:color-mix(in srgb,var(--ginkgo) 7%,transparent)}
+.it::before{content:"";position:absolute;left:-19px;top:15px;width:10px;height:10px;background:var(--ginkgo);transform:rotate(45deg);border-radius:2px 8px 2px 8px;box-shadow:0 0 0 3px var(--card)}
+.it.hotel::before{background:var(--momiji)}
+.it.food::before{background:var(--amber)}
+.it.trans::before{background:var(--moss);border-radius:50%}
+.it-top{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
+.it-time{font-weight:900;color:var(--momiji);font-variant-numeric:tabular-nums;min-width:52px}
+.it-type{font-size:.7rem;border:1px solid var(--line2);border-radius:10px;padding:0 7px;color:var(--ink2)}
+.it-name{font-weight:700}
+.maplink{color:inherit;text-decoration:none;border-bottom:1px dashed currentColor;cursor:pointer}
+.maplink:hover{color:var(--momiji);border-bottom-color:var(--momiji)}
+.maplink .pin{font-size:.78em;margin-left:2px}
+.it-sub{margin:4px 0 0;font-size:.85rem;color:var(--ink2);white-space:pre-line}
+.it-extra{margin:5px 0 0;font-size:.8rem;display:flex;gap:12px;flex-wrap:wrap;color:var(--ink2)}
+.it-extra a{word-break:break-all}
+.pill{display:inline-block;font-size:.72rem;background:var(--paper2);border-radius:8px;padding:1px 7px;color:var(--ink2)}
+.busbox{margin-top:10px;background:var(--paper2);border-radius:10px;padding:10px 12px;font-size:.82rem}
+.busbox table{font-size:.8rem;margin-top:6px}
+.busbox th,.busbox td{padding:3px 8px}
+/* ============ map ============ */
+#map{
+  height:560px;border-radius:16px;border:1px solid var(--line);
+  filter:var(--map-tint);box-shadow:0 3px 14px var(--shadow);z-index:1;
+}
+.leaflet-popup-content-wrapper{font-family:"Noto Serif TC",serif}
+.leaflet-container a{color:var(--momiji)}
+.leaf-marker{filter:drop-shadow(0 2px 2px rgba(0,0,0,.35))}
+.map-legend{display:flex;gap:16px;flex-wrap:wrap;margin:10px 2px 0;font-size:.82rem;color:var(--ink2)}
+.map-legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+/* ============ cost ============ */
+.cost-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:16px}
+.cost-card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--ginkgo);border-radius:14px;padding:14px 16px;box-shadow:0 2px 10px var(--shadow)}
+.cost-card:nth-child(2){border-top-color:var(--momiji)}
+.cost-card:nth-child(3){border-top-color:var(--moss)}
+.cost-card h3{margin:0 0 4px;font-size:.92rem;color:var(--ink2);font-weight:700}
+.cost-card .big{font-size:1.6rem;font-weight:900;color:var(--amber);font-variant-numeric:tabular-nums}
+[data-theme="dark"] .cost-card .big{color:var(--ginkgo)}
+.cost-note{background:color-mix(in srgb,var(--ginkgo) 10%,var(--card));border:1px solid var(--ginkgo);border-radius:12px;padding:12px 14px;font-size:.88rem;margin:14px 0}
+/* ============ spots ============ */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px;align-items:center}
+.filters select,.filters input{
+  font-family:inherit;font-size:.85rem;padding:7px 11px;border-radius:10px;
+  border:1px solid var(--line2);background:var(--card);color:var(--ink);
+}
+.filters input{min-width:190px}
+.filters .count{color:var(--ink2);font-size:.82rem;margin-left:auto}
+.tag-type{font-size:.7rem;padding:1px 8px;border-radius:10px;border:1px solid var(--line2);color:var(--ink2);white-space:nowrap}
+.tag-type.food{color:var(--amber);border-color:var(--amber)}
+.tag-type.spot{color:var(--momiji);border-color:var(--momiji)}
+.tag-type.shop{color:var(--moss);border-color:var(--moss)}
+.tag-type.other{color:var(--ink2)}
+/* ============ alerts ============ */
+.alert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.alert{border:1px solid var(--line);border-left:5px solid var(--ink2);border-radius:0 12px 12px 0;background:var(--card);padding:12px 14px}
+.alert.交通管制{border-left-color:var(--amber)}
+.alert.熊出沒風險{border-left-color:var(--momiji)}
+.alert.訂房緊急度{border-left-color:var(--moss)}
+.alert h4{margin:0 0 3px;font-size:.92rem}
+.alert h4 .cat{font-size:.7rem;color:var(--ink2);font-weight:400;margin-left:6px}
+.alert p{margin:4px 0 0;font-size:.84rem;color:var(--ink2)}
+.alert .act{color:var(--ink);background:color-mix(in srgb,var(--ginkgo) 12%,transparent);border-radius:8px;padding:5px 8px;margin-top:7px;display:block;font-size:.82rem}
+.risk-low{color:var(--risk-low)}.risk-mid{color:var(--risk-mid)}.risk-high{color:var(--risk-high)}
+/* ============ sos ============ */
+.hotline{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:8px;flex-wrap:wrap}
+.hotline .nm{font-weight:700}
+.hotline .ph{font-weight:900;font-size:1.05rem;text-decoration:none;color:var(--momiji);white-space:nowrap}
+.hotline .ph:hover{text-decoration:underline}
+.steps{counter-reset:s;list-style:none;padding:0;margin:12px 0}
+.steps li{counter-increment:s;position:relative;padding:9px 12px 9px 44px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;font-size:.88rem}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:10px;width:22px;height:22px;border-radius:50%;background:var(--momiji);color:#fff;font-size:.78rem;font-weight:900;display:flex;align-items:center;justify-content:center}
+.phrase{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:8px}
+.phrase .zh{font-weight:700;margin-bottom:4px}
+.phrase .ja{color:var(--momiji);font-size:.92rem}
+.phrase .en{color:var(--ink2);font-size:.84rem;font-style:italic}
+.phrase .tip{margin-top:5px;font-size:.8rem;color:var(--ink2);background:var(--paper2);border-radius:8px;padding:5px 8px}
+/* ============ charging ============ */
+.chg h4{margin:14px 0 8px;font-size:1rem;color:var(--momiji)}
+/* ============ footer ============ */
+footer{margin:40px 0 30px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink2);font-size:.8rem;text-align:center}
+footer .sources{margin-top:6px;font-size:.72rem;opacity:.75}
+/* ============ print ============ */
+@media print{
+  :root{--paper:#fff;--card:#fff;--ink:#000;--ink2:#333;--line:#bbb}
+  [data-theme]{--paper:#fff;--card:#fff;--ink:#000;--ink2:#333}
+  header.nav,#themeBtn,.chev,.filters,#map,.map-legend{display:none!important}
+  body{background:#fff;background-image:none}
+  .day{break-inside:avoid;box-shadow:none}
+  .day summary{background:#f5f0e6}
+  section{padding:14px 0 4px}
+  .hero-leaf{display:none}
+}
+@media (max-width:640px){
+  .day summary{padding:12px}
+  .day-body{padding:12px}
+  .seal{width:40px;height:40px}
+  #map{height:420px}
+  .it-time{min-width:46px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="#b4322a"><path d="M32 6c2 6 1 10-1 14 5-3 10-4 15-2-4 3-7 7-8 12 6-1 11 1 15 5-6 0-11 2-15 6 4 2 7 6 8 11-5-3-10-3-15-1 1 5 4 9 8 12-6-1-11 0-15 4 0-6-2-11-6-15-4 4-9 6-15 6 4-4 6-9 6-14-5 1-10 0-14-4 6-1 11-4 14-8-4-3-6-8-6-13 5 3 10 4 15 2-2-5-2-10 0-15 3 4 8 7 14 8-1-3-1-6 0-9z"/><rect x="30" y="44" width="4" height="14" rx="2" fill="#8a5a2b"/></g></svg>
+      東北紅葉自駕 2026
+    </div>
+    <nav class="tabs" id="tabs">
+      <a href="#overview">概覽</a><a href="#days">每日行程</a><a href="#mapsec">地圖</a>
+      <a href="#cost">費用</a><a href="#spots">景點餐廳</a><a href="#alerts">提醒</a><a href="#sos">SOS</a>
+    </nav>
+    <button id="themeBtn" type="button" aria-label="切換深淺色主題"><span id="themeIcon">🌙</span><span id="themeTxt">夜楓</span></button>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="hero" id="top">
+  <svg class="hero-leaf" viewBox="0 0 64 64" aria-hidden="true"><path fill="#b4322a" d="M32 6c2 6 1 10-1 14 5-3 10-4 15-2-4 3-7 7-8 12 6-1 11 1 15 5-6 0-11 2-15 6 4 2 7 6 8 11-5-3-10-3-15-1 1 5 4 9 8 12-6-1-11 0-15 4 0-6-2-11-6-15-4 4-9 6-15 6 4-4 6-9 6-14-5 1-10 0-14-4 6-1 11-4 14-8-4-3-6-8-6-13 5 3 10 4 15 2-2-5-2-10 0-15 3 4 8 7 14 8-1-3-1-6 0-9z"/></svg>
+  <h1>日本東北<span class="koyo">紅葉</span>自駕遊</h1>
+  <p class="sub" id="heroSub"></p>
+  <div class="chips" id="heroChips"></div>
+</section>
+
+<section id="overview">
+  <div class="sec-head"><h2>行程概覽</h2><span class="en">Overview</span></div>
+  <div class="rule"></div>
+  <div class="tbl-wrap"><table id="ovTable"></table></div>
+  <h3 style="margin:22px 0 10px;font-size:1.05rem">重要決策紀錄</h3>
+  <ul class="decisions" id="decisionList"></ul>
+</section>
+
+<section id="days">
+  <div class="sec-head"><h2>每日行程</h2><span class="en">Day by Day</span></div>
+  <div class="rule"></div>
+  <div id="dayList"></div>
+</section>
+
+<section id="mapsec">
+  <div class="sec-head"><h2>自駕路線地圖</h2><span class="en">Route Map</span></div>
+  <div class="rule"></div>
+  <div id="map"></div>
+  <div class="map-legend">
+    <span><i style="background:var(--momiji)"></i>每晚住宿</span>
+    <span><i style="background:var(--ginkgo)"></i>主要景點</span>
+    <span><i style="background:var(--moss)"></i>機場</span>
+    <span>紅線：12 天自駕路線</span>
+  </div>
+</section>
+
+<section id="cost">
+  <div class="sec-head"><h2>費用總表</h2><span class="en">Budget</span></div>
+  <div class="rule"></div>
+  <div class="cost-grid" id="costCards"></div>
+  <div class="cost-note" id="costNote"></div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+    <div>
+      <h3 style="font-size:1rem;margin:8px 0 8px">住宿明細</h3>
+      <div class="tbl-wrap"><table id="hotelCostTable"></table></div>
+    </div>
+    <div>
+      <h3 style="font-size:1rem;margin:8px 0 8px">租車與交通</h3>
+      <div class="tbl-wrap"><table id="rentalTable"></table></div>
+      <h3 style="font-size:1rem;margin:16px 0 8px">逐日過路費（ETC）</h3>
+      <div class="tbl-wrap"><table id="tollTable"></table></div>
+    </div>
+  </div>
+</section>
+
+<section id="spots">
+  <div class="sec-head"><h2>景點餐廳總表</h2><span class="en">Spots & Dining</span></div>
+  <div class="rule"></div>
+  <div class="filters">
+    <select id="fCounty"><option value="">全部縣份</option></select>
+    <select id="fDay"><option value="">全部 Day</option></select>
+    <select id="fType"><option value="">全部類型</option></select>
+    <input id="fSearch" type="search" placeholder="搜尋名稱／說明…">
+    <span class="count" id="spotCount"></span>
+  </div>
+  <div class="tbl-wrap"><table id="spotTable"></table></div>
+</section>
+
+<section id="alerts">
+  <div class="sec-head"><h2>重要提醒</h2><span class="en">Alerts & Snow Risk</span></div>
+  <div class="rule"></div>
+  <div class="alert-grid" id="alertGrid"></div>
+  <h3 style="font-size:1.05rem;margin:22px 0 10px">每日雪／結冰風險與雪胎價值</h3>
+  <div class="tbl-wrap"><table id="snowTable"></table></div>
+</section>
+
+<section id="sos">
+  <div class="sec-head"><h2>SOS 應急資訊</h2><span class="en">Emergency</span></div>
+  <div class="rule"></div>
+  <div id="hotlines"></div>
+  <h3 style="font-size:1.05rem;margin:18px 0 8px" id="sosStepTitle"></h3>
+  <ol class="steps" id="sosSteps"></ol>
+  <h3 style="font-size:1.05rem;margin:18px 0 8px">實用救命日文／英文對話</h3>
+  <div id="phrases"></div>
+  <div class="chg">
+    <h3 style="font-size:1.05rem;margin:22px 0 8px">充電裝置清單</h3>
+    <div id="charging"></div>
+  </div>
+</section>
+
+<footer>
+  <div>日本東北紅葉自駕遊 2026｜行程手帳 · 資料源自 Google 試算表，建置時快取</div>
+  <div class="sources">地圖 © OpenStreetMap 貢獻者 · 地圖引擎 Leaflet · 字體 Noto Serif TC / Zen Old Mincho</div>
+</footer>
+
+</main>
+
+<script id="trip-data" type="application/json">__DATA__</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("trip-data").textContent);
+const $ = (s) => document.querySelector(s);
+const el = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const nl2br = (s) => esc(s).replace(/\n/g, "<br>");
+const isUrl = (s) => /^https?:\/\//.test(String(s || "").trim());
+const urlCell = (s) => {
+  const v = String(s || "").trim();
+  if (!v || v === "—") return "—";
+  if (isUrl(v)) { const label = v.replace(/^https?:\/\//, "").slice(0, 42); return `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(label)}…</a>`; }
+  return nl2br(v);
+};
+const telCell = (s) => {
+  const v = String(s || "").trim();
+  const m = v.match(/(\+?\d[\d\-() ]{6,}\d)/);
+  if (m) { const tel = m[1].replace(/[^\d+]/g, ""); return `${esc(v)} <a href="tel:${esc(tel)}">📞</a>`; }
+  return nl2br(v);
+};
+const geoByName = Object.fromEntries(DATA.geo.map(g => [g.name, g]));
+const mapUrl = (name, cellUrl) => {
+  const n = String(name || "").trim();
+  if (!n || n.startsWith("—")) return "";
+  const first = n.split("\n")[0].trim();
+  const g = geoByName[n] || geoByName[first];
+  if (g && g.map) return g.map;
+  if (cellUrl) return cellUrl;
+  if (g) return `https://www.google.com/maps/search/?api=1&query=${g.lat},${g.lng}`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(first)}`;
+};
+const mapLink = (name, inner, cellUrl, pin = true) => {
+  const u = mapUrl(name, cellUrl);
+  if (!u) return inner;
+  return `<a class="maplink" href="${u}" target="_blank" rel="noopener">${inner}${pin ? '<span class="pin">📍</span>' : ""}</a>`;
+};
+const rawMapLink = (url, inner, pin = false) => url
+  ? `<a class="maplink" href="${esc(url)}" target="_blank" rel="noopener">${inner}${pin ? '<span class="pin">📍</span>' : ""}</a>`
+  : inner;
+const MAP_TYPES = ["景點", "餐廳", "住宿", "體驗", "購物", "下午茶", "self dinner", "休息", "備用"];
+const isMapType = (t) => MAP_TYPES.some(k => String(t || "").includes(k));
+const leafSvg = (fill) => `data:image/svg+xml;utf8,${encodeURIComponent(
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40"><path fill="${fill}" d="M32 6c2 6 1 10-1 14 5-3 10-4 15-2-4 3-7 7-8 12 6-1 11 1 15 5-6 0-11 2-15 6 4 2 7 6 8 11-5-3-10-3-15-1 1 5 4 9 8 12-6-1-11 0-15 4 0-6-2-11-6-15-4 4-9 6-15 6 4-4 6-9 6-14-5 1-10 0-14-4 6-1 11-4 14-8-4-3-6-8-6-13 5 3 10 4 15 2-2-5-2-10 0-15 3 4 8 7 14 8-1-3-1-6 0-9z"/></svg>`)}`;
+
+/* ---------- theme ---------- */
+const root = document.documentElement;
+const THEME_KEY = "tohoku-theme";
+function applyTheme(t){
+  root.dataset.theme = t;
+  $("#themeIcon").textContent = t === "dark" ? "🍁" : "🌙";
+  $("#themeTxt").textContent = t === "dark" ? "和紙" : "夜楓";
+  try{ localStorage.setItem(THEME_KEY, t); }catch(e){}
+  if (window._map) {
+    window._map.invalidateSize();
+  }
+}
+$("#themeBtn").addEventListener("click", () => applyTheme(root.dataset.theme === "dark" ? "light" : "dark"));
+(function initTheme(){
+  let t = null;
+  try{ t = localStorage.getItem(THEME_KEY); }catch(e){}
+  if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  applyTheme(t);
+})();
+
+/* ---------- hero ---------- */
+$("#heroSub").textContent = `${DATA.meta.subtitle}｜${DATA.meta.range}`;
+const tot = DATA.cost.totals;
+$("#heroChips").innerHTML = [
+  `<span class="chip">✈️ <b>${esc(DATA.meta.flightLine.split("｜")[0])}</b></span>`,
+  `<span class="chip">👥 ${esc(DATA.meta.travelers)}</span>`,
+  `<span class="chip">🚗 ${esc(DATA.meta.dailyDrive)}</span>`,
+  `<span class="chip red">💰 住宿 <b>${esc(tot.hotelHKD)}</b> · 機票 <b>${esc(tot.flightHKD)}</b> · 租車 <b>${esc(tot.rentalHKD)}</b>（HKD）</span>`,
+].join("");
+
+/* ---------- overview ---------- */
+const mealCls = (m) => m.startsWith("b") ? "b" : m.startsWith("l") ? "l" : "d";
+const mealLabel = (m) => ({breakfast:"早",lunch:"午",dinner:"晚"})[m] || m;
+$("#ovTable").innerHTML = `
+<thead><tr><th>Day</th><th>日期</th><th>路線</th><th>車程</th><th>住宿</th><th>膳食</th><th>亮點</th></tr></thead>
+<tbody>${DATA.overview.map(o => `
+<tr>
+  <td class="num"><b>Day ${o.day}</b></td>
+  <td class="num">${esc(o.date)}</td>
+  <td class="ov-route">${esc(o.route)}</td>
+  <td class="num">${esc(o.drive)}</td>
+  <td>${mapLink(o.hotel, esc(o.hotel), o.hotelMap)}</td>
+  <td>${o.meals.map(m => `<span class="meal ${mealCls(m)}">${mealLabel(m)}</span>`).join("")}<div style="font-size:.74rem;color:var(--ink2)">${esc(o.mealPlan)}</div></td>
+  <td>${esc(o.highlights)}</td>
+</tr>`).join("")}</tbody>`;
+
+$("#decisionList").innerHTML = DATA.decisions.map(d => `<li>${nl2br(d)}</li>`).join("");
+
+/* ---------- days ---------- */
+const TYPE_ICON = {"交通":"🚗","景點":"🍁","餐廳":"🍽","住宿":"🏨","體驗":"♨️","購物":"🛍","休息":"☕","還車":"🔑","抵達":"✈️","下午茶":"🍰","備用":"🔄","JR Bus":"🚌","self dinner":"🍽","餐廳／購物":"🍽","景點／餐廳":"🍁","景點／購物":"🍁"};
+const itCls = (t) => t.includes("住宿") ? "hotel" : (t.includes("餐廳") || t.includes("dinner") || t.includes("下午茶")) ? "food" : (t.includes("交通") || t.includes("JR") || t.includes("還車") || t.includes("抵達")) ? "trans" : "";
+const snowByDate = Object.fromEntries(DATA.snow.map(s => [s.date, s]));
+function riskTag(txt){
+  const v = String(txt || "");
+  const cls = v.includes("🟢") ? "risk-low" : v.includes("🟠") || v.includes("🟡") ? "risk-mid" : v.includes("🔴") ? "risk-high" : "";
+  return `<span class="tag ${cls}">${esc(v)}</span>`;
+}
+$("#dayList").innerHTML = DATA.days.map(d => {
+  const date = (d.title.match(/（(\d+\/\d+)/) || [])[1] || "";
+  const sn = snowByDate[date];
+  const warns = d.warnings.map(w => `<div class="warnbox">⚠️ <b>注意</b> ${nl2br(w)}</div>`).join("");
+  const items = d.items.map(it => `
+    <div class="it ${itCls(it.type)}">
+      <div class="it-top">
+        <span class="it-time">${esc(it.time) || "&nbsp;"}</span>
+        <span class="it-type">${TYPE_ICON[it.type] || "•"} ${esc(it.type) || "—"}</span>
+        <span class="it-name">${it.name ? (isMapType(it.type) || it.map ? mapLink(it.name, esc(it.name), it.map) : esc(it.name)) : "（延續上一項）"}</span>
+      </div>
+      ${it.detail ? `<p class="it-sub">${rawMapLink(it.detailMap, nl2br(it.detail))}</p>` : ""}
+      ${(it.parking && it.parking !== "—") || (it.ref && it.ref !== "—") || (it.note && it.note !== "—") || it.payment ? `
+      <div class="it-extra">
+        ${it.parking && it.parking !== "—" ? `<span>🅿️ ${rawMapLink(it.parkingMap, nl2br(it.parking))}</span>` : ""}
+        ${it.ref && it.ref !== "—" ? `<span>🔗 ${isUrl(it.ref) ? urlCell(it.ref) : it.refMap ? rawMapLink(it.refMap, nl2br(it.ref)) : telCell(it.ref)}</span>` : ""}
+        ${it.note && it.note !== "—" ? `<span>📝 ${rawMapLink(it.noteMap, nl2br(it.note))}</span>` : ""}
+        ${it.payment ? `<span class="pill">💳 ${esc(it.payment)}</span>` : ""}
+      </div>` : ""}
+    </div>`).join("");
+  const bus = d.bus ? `
+    <div class="busbox">
+      🚌 <b>${esc(d.bus.title)}</b>${d.bus.mapUrl ? ` · <a href="${esc(d.bus.mapUrl)}" target="_blank" rel="noopener">時刻表來源</a>` : ""}
+      <table><thead><tr><th>石ヶ戸 發</th><th>雲井の滝 到</th></tr></thead>
+      <tbody>${d.bus.times.map(t => `<tr><td class="num">${esc(t.depart)}</td><td class="num">${esc(t.arrive)}</td></tr>`).join("")}</tbody></table>
+    </div>` : "";
+  return `
+  <details class="day" ${d.day === 1 ? "open" : ""} id="day-${d.day}">
+    <summary>
+      <div class="seal"><small>DAY</small><span>${d.day}</span></div>
+      <div class="day-sum">
+        <h3>${esc(d.title.replace(/^Day\s*\d+（/, "").replace(/）.*/, "")) || `Day ${d.day}`}</h3>
+        <p>${esc(d.summary)}</p>
+        <div class="day-meta">
+          ${d.drive ? `<span class="tag drive">🚗 ${esc(d.drive)}</span>` : ""}
+          ${sn ? riskTag(`❄️ 雪 ${sn.snowRisk}`) + riskTag(`🧊 結冰 ${sn.iceRisk}`) : ""}
+        </div>
+      </div>
+      <span class="chev">▶</span>
+    </summary>
+    <div class="day-body">${warns}<div class="tl">${items}</div>${bus}</div>
+  </details>`;
+}).join("");
+
+/* ---------- map ---------- */
+function initMap(){
+  if (typeof L === "undefined") { $("#map").innerHTML = '<p style="padding:20px">地圖資料無法載入（可能離線）。可查看上方每日行程文字資訊。</p>'; return; }
+  const map = L.map("map", {scrollWheelZoom:false}).setView([39.3, 140.8], 7);
+  window._map = map;
+  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  const css = getComputedStyle(document.documentElement);
+  const momiji = css.getPropertyValue("--momiji").trim() || "#b4322a";
+  const ginkgo = css.getPropertyValue("--ginkgo").trim() || "#e0a526";
+  const moss = css.getPropertyValue("--moss").trim() || "#6b7f4e";
+  const routePts = DATA.route.map(n => geoByName[n]).filter(Boolean).map(g => [g.lat, g.lng]);
+  if (routePts.length > 1) L.polyline(routePts, {color: momiji, weight: 4, opacity: .85, dashArray: "10 6"}).addTo(map);
+  DATA.geo.forEach(g => {
+    const color = g.kind === "hotel" ? momiji : g.kind === "airport" ? moss : ginkgo;
+    const icon = L.divIcon({
+      className: "leaf-marker",
+      html: `<img src="${leafSvg(color)}" width="34" height="34" alt="">`,
+      iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -14],
+    });
+    const dayTag = g.day ? `<br><a href="#day-${g.day}">→ Day ${g.day} 行程</a>` : "";
+    L.marker([g.lat, g.lng], {icon}).addTo(map)
+      .bindPopup(`<b>${esc(g.name)}</b>${g.kind === "hotel" ? " 🏨" : g.kind === "airport" ? " ✈️" : " 🍁"}${dayTag}`);
+  });
+  map.fitBounds(L.latLngBounds(routePts), {padding: [40, 40]});
+}
+initMap();
+
+/* ---------- cost ---------- */
+$("#costCards").innerHTML = `
+  <div class="cost-card"><h3>🏨 住宿（11 晚）</h3><div class="big">${esc(tot.hotelHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · 含早晚餐方案差異</div></div>
+  <div class="cost-card"><h3>✈️ 機票（3 人）</h3><div class="big">${esc(tot.flightHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · HKG ⇄ SDJ</div></div>
+  <div class="cost-card"><h3>🚗 租車相關</h3><div class="big">${esc(tot.rentalHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · 車資＋ETC＋保險＋雪胎＋油費</div></div>`;
+$("#costNote").innerHTML = DATA.cost.tollNotes.map(n => `· ${esc(n)}`).join("<br>");
+$("#hotelCostTable").innerHTML = `
+<thead><tr><th>Day</th><th>住宿</th><th>JPY</th><th>HKD</th></tr></thead>
+<tbody>${DATA.cost.hotels.map(h => `<tr><td class="num">${esc(h.day.replace("Day ", "D"))}</td><td>${esc(h.name)}</td><td class="num">${esc(h.jpy) || "—"}</td><td class="num money">${esc(h.hkd)}</td></tr>`).join("")}</tbody>`;
+$("#rentalTable").innerHTML = `
+<thead><tr><th>項目</th><th>JPY</th><th>HKD</th></tr></thead>
+<tbody>${DATA.cost.rental.map(r => `<tr><td>${esc(r.item)}</td><td class="num">${esc(r.jpy) || "—"}</td><td class="num money">${esc(r.hkd)}</td></tr>`).join("")}
+<tr style="font-weight:900"><td>合計</td><td></td><td class="num money">${esc(tot.rentalHKD)}</td></tr></tbody>`;
+$("#tollTable").innerHTML = `
+<thead><tr><th>Day</th><th>收費段落</th><th>金額</th></tr></thead>
+<tbody>${DATA.cost.tolls.map(t => `<tr><td class="num">${esc(t.day)}</td><td>${esc(t.segment)}</td><td class="num">${esc(t.amount)}</td></tr>`).join("")}</tbody>`;
+
+/* ---------- spots ---------- */
+const counties = [...new Set(DATA.spots.map(s => s.county))];
+const daySet = [...new Set(DATA.spots.map(s => (s.day || "").replace(/\/.*$/, "").trim()))].filter(d => /^Day\d+$/.test(d)).sort((a, b) => parseInt(a.slice(3)) - parseInt(b.slice(3)));
+const types = [...new Set(DATA.spots.map(s => s.type))];
+$("#fCounty").insertAdjacentHTML("beforeend", counties.map(c => `<option>${esc(c)}</option>`).join(""));
+$("#fDay").insertAdjacentHTML("beforeend", daySet.map(d => `<option>${esc(d)}</option>`).join(""));
+$("#fType").insertAdjacentHTML("beforeend", types.map(t => `<option>${esc(t)}</option>`).join(""));
+function typeCls(t){ return t.includes("餐廳") ? "food" : t.includes("景點") ? "spot" : t.includes("購物") ? "shop" : "other"; }
+function renderSpots(){
+  const c = $("#fCounty").value, dy = $("#fDay").value, ty = $("#fType").value, q = $("#fSearch").value.trim().toLowerCase();
+  const rows = DATA.spots.filter(s =>
+    (!c || s.county === c) && (!dy || (s.day || "").includes(dy)) && (!ty || s.type === ty) &&
+    (!q || (s.name + s.detail + s.note).toLowerCase().includes(q)));
+  $("#spotCount").textContent = `${rows.length} 筆 / 共 ${DATA.spots.length}`;
+  $("#spotTable").innerHTML = `
+  <thead><tr><th>縣份</th><th>Day</th><th>名稱</th><th>類型</th><th>說明</th><th>網址／電話</th><th>備註</th></tr></thead>
+  <tbody>${rows.map(s => `<tr>
+    <td>${esc(s.county)}</td><td class="num">${esc(s.day)}</td>
+    <td>${mapLink(s.name, `<b>${esc(s.name)}</b>`, s.map)}</td>
+    <td><span class="tag-type ${typeCls(s.type)}">${esc(s.type)}</span></td>
+    <td>${esc(s.detail)}</td>
+    <td>${isUrl(s.ref) ? urlCell(s.ref) : telCell(s.ref)}</td>
+    <td>${esc(s.note)}</td></tr>`).join("")}</tbody>`;
+}
+["fCounty","fDay","fType","fSearch"].forEach(id => $("#" + id).addEventListener("input", renderSpots));
+renderSpots();
+
+/* ---------- alerts ---------- */
+$("#alertGrid").innerHTML = DATA.alerts.map(a => `
+  <div class="alert ${esc(a.category)}">
+    <h4>${esc(a.place)}<span class="cat">${esc(a.category)}</span></h4>
+    <p>${esc(a.info)}</p>
+    <span class="act">✅ ${esc(a.action)}</span>
+  </div>`).join("");
+$("#snowTable").innerHTML = `
+<thead><tr><th>日期</th><th>行程</th><th>❄️ 雪風險</th><th>🧊 結冰風險</th><th>自駕注意</th><th>雪胎價值</th></tr></thead>
+<tbody>${DATA.snow.map(s => {
+  const rcls = (v) => v.includes("🟢") ? "risk-low" : v.includes("🟡") || v.includes("🟠") ? "risk-mid" : "risk-high";
+  return `<tr><td class="num">${esc(s.date)}</td><td>${esc(s.route)}</td>
+  <td class="${rcls(s.snowRisk)}"><b>${esc(s.snowRisk)}</b></td>
+  <td class="${rcls(s.iceRisk)}"><b>${esc(s.iceRisk)}</b></td>
+  <td>${esc(s.caution)}</td><td class="num">${esc(s.tireValue)}</td></tr>`;
+}).join("")}</tbody>`;
+
+/* ---------- sos ---------- */
+$("#hotlines").innerHTML = DATA.sos.hotlines.map(h => `
+  <div class="hotline">
+    <div><div class="nm">${esc(h.name)}</div>${h.note ? `<div style="font-size:.8rem;color:var(--ink2)">${esc(h.note)}</div>` : ""}</div>
+    ${h.phone ? `<a class="ph" href="tel:${esc(h.phone.replace(/[^\d+]/g, ""))}">${esc(h.phone)}</a>` : ""}
+  </div>`).join("");
+const sosHead = DATA.sos.steps[0] || "";
+$("#sosStepTitle").textContent = sosHead;
+$("#sosSteps").innerHTML = DATA.sos.steps.slice(1).map(s => `<li>${nl2br(s)}</li>`).join("");
+$("#phrases").innerHTML = DATA.sos.phrases.map(p => `
+  <div class="phrase">
+    <div class="zh">${esc(p.zh)}</div>
+    ${p.ja ? `<div class="ja">${esc(p.ja)}</div>` : ""}
+    ${p.en ? `<div class="en">${esc(p.en)}</div>` : ""}
+    ${p.tip ? `<div class="tip">💡 ${esc(p.tip)}</div>` : ""}
+  </div>`).join("");
+$("#charging").innerHTML = DATA.charging.map(sec => `
+  <h4>${esc(sec.title)}</h4>
+  <div class="tbl-wrap"><table>
+  <thead><tr><th>項目</th><th>數量</th><th>規格</th><th>用途</th></tr></thead>
+  <tbody>${sec.items.map(i => `<tr><td>${esc(i.name)}</td><td class="num">${esc(i.qty)}</td><td>${esc(i.spec)}</td><td>${esc(i.use)}</td></tr>`).join("")}</tbody>
+  </table></div>`).join("");
+
+/* ---------- nav active state ---------- */
+const tabLinks = [...document.querySelectorAll("#tabs a")];
+const secIds = tabLinks.map(a => a.getAttribute("href").slice(1));
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    tabLinks.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + en.target.id));
+  });
+}, {rootMargin: "-40% 0px -55% 0px"});
+secIds.forEach(id => { const s = document.getElementById(id); if (s) obs.observe(s); });
+</script>
+</body>
+</html>

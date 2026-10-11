@@ -1,0 +1,2566 @@
+{
+ "meta": {
+  "title": "日本東北自駕遊行程表",
+  "subtitle": "日本東北自駕遊行程總覽　2026/10/20 – 2026/10/31（11晚12天）｜仙台機場進出",
+  "flightLine": "航班：HKG 08:00 → SDJ 13:35（10/20）／ SDJ 15:00 → HKG 19:40（10/31）｜同行：2位成人＋1位長輩｜每日開車目標≤3小時",
+  "range": "2026/10/20 – 2026/10/31",
+  "nights": "11 晚 12 天｜仙台機場進出",
+  "travelers": "2 位成人 ＋ 1 位長輩",
+  "dailyDrive": "每日開車目標 ≤ 3 小時"
+ },
+ "overview": [
+  {
+   "day": 1,
+   "date": "10/20（二）",
+   "route": "仙台機場 → 仙台市區",
+   "drive": "約30分",
+   "hotel": "奥州秋保温泉 蘭亭",
+   "mealPlan": "第二天包早餐",
+   "highlights": "取車、青葉城址、仙台市區牛舌晚餐",
+   "meals": [
+    "dinner"
+   ],
+   "hotelMap": "https://maps.app.goo.gl/7Nc5e5BJWxN3mc5DA"
+  },
+  {
+   "day": 2,
+   "date": "10/21（三）",
+   "route": "仙台 → 磊々峡 → 藏王溫泉",
+   "drive": "約2小時",
+   "hotel": "蔵王四季のホテル",
+   "mealPlan": "早＋晚\n【山形牛尽くし◆贅沢夕食プラン】山形牛のWメインに舌鼓!味噌焼きステーキ&陶板焼き♪",
+   "highlights": "磊々峡溪谷、藏王エコーライン兜風、藏王空中纜車賞紅葉",
+   "meals": [
+    "lunch"
+   ],
+   "hotelMap": "https://maps.app.goo.gl/aL5JkwDwLjrkPws46"
+  },
+  {
+   "day": 3,
+   "date": "10/22（四）",
+   "route": "藏王溫泉 → 山形市 → 角館 → 田澤湖",
+   "drive": "約3小時",
+   "hotel": "西木温泉ふれあいプラザクリオン",
+   "mealPlan": "第二天包早餐",
+   "highlights": "文翔館、七日町、山形酒巡り、角館武家屋敷紅葉",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "hotelMap": "https://maps.app.goo.gl/DMDT8L9jhaFwymcs9"
+  },
+  {
+   "day": 4,
+   "date": "10/23（五）",
+   "route": "田澤湖 → 乳頭溫泉鄉（日歸）→ 弘前",
+   "drive": "約2.5–3小時",
+   "hotel": "Guest House Chara",
+   "mealPlan": "膳食自行解決",
+   "highlights": "鶴の湯日歸溫泉（免預約）＋午餐",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "hotelMap": "https://maps.app.goo.gl/o3143yHqm1QyYDxs8"
+  },
+  {
+   "day": 5,
+   "date": "10/24（六）",
+   "route": "弘前 → 黑石 → 青森市",
+   "drive": "約1.5小時",
+   "hotel": "最多可容納8人團體旅程- Kamiya",
+   "mealPlan": "膳食自行解決",
+   "highlights": "弘前城、蘋果公園",
+   "meals": [
+    "breakfast",
+    "lunch",
+    "dinner"
+   ]
+  },
+  {
+   "day": 6,
+   "date": "10/25（日）",
+   "route": "青森市內悠閒一日",
+   "drive": "局部移動＜1小時",
+   "hotel": "最多可容納8人團體旅程- Kamiya",
+   "mealPlan": "膳食自行解決",
+   "highlights": "ASPAM、青い森わんど、A-FACTORY、青森魚菜中心、睡魔之家 WA・RASSE",
+   "meals": [
+    "breakfast",
+    "lunch",
+    "dinner"
+   ]
+  },
+  {
+   "day": 7,
+   "date": "10/26（一）",
+   "route": "青森市 → 八甲田 → 奧入瀨溪流",
+   "drive": "約2–2.5小時",
+   "hotel": "Jalan Yuze Hotel Resort",
+   "mealPlan": "早＋晚\n自助餐的形式，为您提供大量使用秋田当地时令食材烹制的乡土料理",
+   "highlights": "八甲田纜車（早出避排隊）、奧入瀨溪流精華段紅葉",
+   "meals": [
+    "breakfast",
+    "lunch"
+   ],
+   "hotelMap": "https://maps.app.goo.gl/vBJgt9SkcCeTeTZE7"
+  },
+  {
+   "day": 8,
+   "date": "10/27（二）",
+   "route": "奧入瀨 → 八幡平 → 盛岡",
+   "drive": "約2.5小時",
+   "hotel": "在日本IwateMorioka的出租單位",
+   "mealPlan": "膳食自行解決",
+   "highlights": "八幡平アスピーテライン兜風、盛岡椀子蕎麥麵",
+   "meals": [
+    "lunch",
+    "dinner"
+   ]
+  },
+  {
+   "day": 9,
+   "date": "10/28（三）",
+   "route": "盛岡 → 平泉 → 嚴美溪 → 猊鼻溪 → 一關",
+   "drive": "約2小時",
+   "hotel": "厳美渓温泉 いつくし園",
+   "mealPlan": "早＋晚\n<前沢牛すき焼き>ブランド牛の贅沢な味わいを基本会席で愉しむ《夕朝食",
+   "highlights": "中尊寺金色堂、毛越寺、嚴美溪郭公屋、猊鼻溪乘船、前澤牛燒肉",
+   "meals": [
+    "breakfast",
+    "lunch"
+   ],
+   "hotelMap": "https://maps.app.goo.gl/yaDEfAD68YfTj34o6"
+  },
+  {
+   "day": 10,
+   "date": "10/29（四）",
+   "route": "一關 → 松島（全日深度遊覽）",
+   "drive": "約1.5–2小時",
+   "hotel": "松島温泉 ホテル 絶景の館",
+   "mealPlan": "膳食自行解決",
+   "highlights": "瑞巖寺、松島遊船、円通院夜楓點燈、松島吃蠔",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "hotelMap": "https://maps.app.goo.gl/ZqUvK6m4ev2N8aYJA"
+  },
+  {
+   "day": 11,
+   "date": "10/30（五）",
+   "route": "松島 → 鹽釜 → 仙台市區 → 仙台Outlet",
+   "drive": "約1.5–2小時",
+   "hotel": "Kunimaru先生的公寓",
+   "mealPlan": "膳食自行解決",
+   "highlights": "鹽釜魚市場早市、一番町拱廊商店街補貨、Uniqlo/藥妝/超市、仙台泉Outlet購物",
+   "meals": [
+    "breakfast",
+    "lunch",
+    "dinner"
+   ]
+  },
+  {
+   "day": 12,
+   "date": "10/31（六）",
+   "route": "仙台朝市 → 仙台機場",
+   "drive": "約30分",
+   "hotel": "—（返程）",
+   "mealPlan": "—",
+   "highlights": "仙台朝市、從容還車、15:00起飛",
+   "meals": [
+    "breakfast"
+   ]
+  }
+ ],
+ "decisions": [
+  "銀山溫泉已完全取消：目標日期住宿全滿 + 冬季／旺季有マイカー交通管制需停大正ろまん館轉乘，改由藏王溫泉一泊二食取代秘湯體驗。",
+  "藏王溫泉（10/21）：已確認尚有空房，一泊二食，日間安排纜車＋エコーライン兜風，兩者皆做，不需二選一。",
+  "乳頭溫泉鄉：7間旅館10/23、10/24全滿（僅休暇村10/24有房），故改為「鶴の湯日歸溫泉」（不需預約，10:00–15:00，週一休），不留宿。",
+  "山寺（立石寺）：一度移除後又確認要重新加入，已排入 Day3 路線（山形市段落，可視體力調整是否登頂）。",
+  "奧入瀨渓流：官方已於2026/3/26公告，2026年度マイカー交通管制提前至9/7–9/13實施，10/26行經時「不受影響」，可正常開車進入（過去慣例是10月下旬，請仍在出發前1個月覆核）。",
+  "八幡平アスピーテライン：10月中旬起夜間17:00–08:30封路，歷年全面冬季封路約落在11月4–5日傍晚，10/27白天通行應無虞，但務必17:00前通過，出發前請再次向八幡平市觀光協會確認（0195-78-3500）。",
+  "熊出沒風險考量：已移除「抱返り渓谷」「蔦温泉」等森林深處步道景點；八甲田、奧入瀨、八幡平山頂線改為「纜車/開車兜風」為主，避免深入山林步道健行。",
+  "仙台朝市原訂Day1，因抵達當天16:00後多數攤位已收攤，已改到Day12（10/31）出發返程當天早上。",
+  "Day10、11：原本擠在同一天的「平泉+猊鼻溪+松島遊船+瑞巖寺」已拆成兩天，避免趕松島遊船末班船（15:30–16:00）。"
+ ],
+ "days": [
+  {
+   "day": 1,
+   "title": "Day 1（10/20 二）｜抵達仙台",
+   "summary": "航班 HKG 08:00 → SDJ 13:35，落地後取車、市區入住",
+   "drive": "約30分鐘（機場 → 仙台市區）",
+   "warnings": [],
+   "items": [
+    {
+     "time": "13:35",
+     "type": "交通",
+     "name": "仙台機場降落",
+     "detail": "入境、提領行李，預估流程約40–60分鐘完成",
+     "parking": "—",
+     "ref": "—",
+     "note": "機場內設租車公司櫃檯／接駁車，出關後跟指標走",
+     "payment": ""
+    },
+    {
+     "time": "約15:00",
+     "type": "租車",
+     "name": "仙台機場\nNissan rent a car 取車",
+     "detail": "たびらいサイト経由の予約番号：104157075(弊社予約番号:26092602095)へ、\nETCカード（税込2420円）を追加いたしました。",
+     "parking": "スタッドレスタイヤ（雪胎）\nETCカード",
+     "ref": "",
+     "note": "建議出發前上網完成線上預約，現場只需簽約取車，加快流程",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/yNFuM6hLBxaWxCVy6"
+    },
+    {
+     "time": "約15:30",
+     "type": "交通",
+     "name": "機場 → 仙台市區",
+     "detail": "開車約30分鐘，走仙台東部道路／宮城野IC方向",
+     "parking": "—",
+     "ref": "—",
+     "note": "第一天不建議排太滿，讓長輩適應右駕左行",
+     "payment": ""
+    },
+    {
+     "time": "",
+     "type": "購物",
+     "name": "Workman Colors 仙台荒井店",
+     "detail": "",
+     "parking": "",
+     "ref": "",
+     "note": "",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/JKHgFD9ALrgqQUKQ7"
+    },
+    {
+     "time": "16:00",
+     "type": "景點",
+     "name": "青葉城址（仙台城跡）",
+     "detail": "伊達政宗騎馬像地標、本丸會館可俯瞰仙台市景，適合黃昏時段前往",
+     "parking": "青葉城本丸会館前有大型付費停車場（約100台）",
+     "ref": "https://www.sendaijyo.com/",
+     "note": "長輩體力可只走本丸展望台一帶，不需走遍全區",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/pLDMaLPvrkG5K9os5"
+    },
+    {
+     "time": "18:30",
+     "type": "餐廳",
+     "name": "仙台牛舌晚餐",
+     "detail": "味太助 本店 週二公休\n利久 西口本店\n伊達の牛たん本舗 無公休\n牛たん料理 閣 ブランドーム本店 無公休",
+     "parking": "多數分店位於車站周邊商場內，可利用車站地下停車場",
+     "ref": "利久：https://www.rikyu-gyutan.co.jp/｜伊達の牛たん本舗：https://www.dategyu.co.jp/",
+     "note": "晚餐尖峰時段人多，建議提前預約或抓17:30前入店",
+     "payment": "",
+     "detailMap": "https://maps.app.goo.gl/BdWeVnQAjusm9NnSA"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "奥州秋保温泉 蘭亭",
+     "detail": "由市區到達約 30 mins 車程 包早餐",
+     "parking": "附設停車位",
+     "ref": "0570-040-707\n宮城縣仙台市太白區秋保町湯本木戶峰7-1",
+     "note": "官網預訂",
+     "payment": "￥22590 現場付款",
+     "map": "https://maps.app.goo.gl/7Nc5e5BJWxN3mc5DA"
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "title": "Day 2（10/21 三）｜仙台 → 磊々峡 → 藏王溫泉【一泊二食】",
+   "summary": "磊々峡溪谷散步 → 藏王エコーライン兜風看御釜 → 藏王空中纜車賞紅葉 → 入住溫泉旅館",
+   "drive": "仙台→磊々峡約40分；磊々峡→藏王溫泉約1.5小時 ≈ 總計約2小時",
+   "warnings": [
+    "藏王エコーライン每年約11月上旬起有冬季封閉（依降雪狀況調整），10/21應仍開放，但建議出發前向山形県／宮城県道路情報再確認一次。",
+    "藏王溫泉已確認尚有空房並完成一泊二食訂房，這是本次行程唯一的「秘湯體驗夜」，請保留好訂房確認信。"
+   ],
+   "items": [
+    {
+     "time": "09:30",
+     "type": "交通",
+     "name": "仙台出發 → 磊々峡",
+     "detail": "開車約40分鐘，走國道457號往秋保溫泉方向",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "10:15",
+     "type": "景點",
+     "name": "磊々峡 （秋保溫泉旁溪谷）",
+     "detail": "奇岩怪石＋溪谷紅葉，遊步道平緩好走，適合長輩，停留約40分–1小時，內有跨溪吊橋「磊々峡橋」",
+     "parking": "秋保溫泉觀光中心周邊有免費／付費公共停車場",
+     "ref": "仙台觀光情報：https://www.sentabi.jp/",
+     "note": "已拿掉秋保大滝，此站作為本日唯一的溪谷景點",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/8MGtsGk1xasuPYMR9"
+    },
+    {
+     "time": "12:00",
+     "type": "餐廳",
+     "name": "秋保溫泉街午餐",
+     "detail": "溫泉街內有多間蕎麥麵、鄉土料理店，可依現場排隊狀況挑選",
+     "parking": "秋保溫泉街周邊多為店家附設停車場",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "13:00",
+     "type": "交通",
+     "name": "秋保 → 藏王溫泉方向",
+     "detail": "開車約1.5小時，山區道路彎多，請留意會車",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "14:30",
+     "type": "景點",
+     "name": "藏王エコーライン兜風（御釜展望）",
+     "detail": "開車直達「刈田峠」「御釜」展望台，不需健行即可眺望火山口湖，沿途多個觀景停靠點",
+     "parking": "御釜駐車場（付費，旺季周末上午較快滿）",
+     "ref": "山形県道路情報：https://www.pref.yamagata.jp/",
+     "note": "此路段每年約11月上旬起封閉，出發前務必再確認通行狀態",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/UqAyrvnbGug5uETh9"
+    },
+    {
+     "time": "15:30",
+     "type": "景點",
+     "name": "藏王空中纜車（藏王ロープウェイ）",
+     "detail": "搭乘至「地藏山頂駅」賞紅葉全景，山腰~山麓段10月下旬正值紅葉極盛期\n一至日 08:30–17:00",
+     "parking": "山麓駅自有大型付費停車場，容量充足",
+     "ref": "https://zaoropeway.co.jp/",
+     "note": "傍晚時段人潮較少，光線也適合拍照",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/tKwjBb5x9SxriaHL9"
+    },
+    {
+     "time": "17:00",
+     "type": "住宿",
+     "name": "蔵王四季のホテル",
+     "detail": "【山形牛肉盛宴 ◆ 豪華晚餐套餐】享受兩道山形牛肉主菜！味噌烤牛排 & 陶瓷烤牛肉♪《",
+     "parking": "",
+     "ref": "所在地：山形県山形市蔵王温泉1272\n電話番号：023-693-1211",
+     "note": "官網預訂",
+     "payment": "￥94,500 現場付款",
+     "map": "https://maps.app.goo.gl/aL5JkwDwLjrkPws46"
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "title": "Day 3（10/22 四）｜藏王溫泉 → 山形市 → 角館 → 田澤湖",
+   "summary": "山形市文化景點與地酒 → 秋田角館武家屋敷賞紅葉 → 田澤湖畔過夜",
+   "drive": "藏王→山形市約30–40分；山形市→角館約2小時；角館→田澤湖約30分 ≈ 總計約3小時",
+   "warnings": [],
+   "items": [
+    {
+     "time": "09:00",
+     "type": "交通",
+     "name": "藏王溫泉 → 山形市",
+     "detail": "開車約30–40分鐘",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "",
+     "type": "",
+     "name": "山形縣觀光物產館 ぐっと山形",
+     "detail": "",
+     "parking": "",
+     "ref": "",
+     "note": "",
+     "payment": ""
+    },
+    {
+     "time": "",
+     "type": "",
+     "name": "Mont bell 山形店",
+     "detail": "取防熊噴霧",
+     "parking": "",
+     "ref": "",
+     "note": "",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/24Thoeoq5BDDyDcs5"
+    },
+    {
+     "time": "11:30",
+     "type": "餐廳／購物",
+     "name": "七日町ルルタス",
+     "detail": "山形市區商業設施，可用午餐、逛街、買伴手禮",
+     "parking": "設施自有付費停車場",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/1uyWWY471fW83F836"
+    },
+    {
+     "time": "",
+     "type": "",
+     "name": "燒肉名匠 山牛",
+     "detail": "",
+     "parking": "",
+     "ref": "https://www.instagram.com/yamagyu_yamagata?stkn=MTR6NGc5dHV1eHVsbg%3D%3D",
+     "note": "",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/mLj48BufUGaLPNKB9"
+    },
+    {
+     "time": "13:00",
+     "type": "交通",
+     "name": "山形市 → 角館",
+     "detail": "開車約2小時，走國道13號北上（沿秋田新幹線走廊，非繞路，是必經幹道）",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "15:30",
+     "type": "景點",
+     "name": "角館武家屋敷通り",
+     "detail": "陸奧小京都，武家屋敷+枝垂櫻樹紅葉，步行街區約1小時",
+     "parking": "主要停車場「武家屋敷駐車場」約150台，10月為旺季收費¥500/日（11–3月才免費）；備案「田畑山駐車場」約90台，通常免費，步行約8分",
+     "ref": "https://www.city.semboku.akita.jp/",
+     "note": "10月屬付費季節，請準備零錢或確認是否可刷卡",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/JdDejR2JyfMWbfuo9"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "西木温泉ふれあいプラザクリオン",
+     "detail": "",
+     "parking": "",
+     "ref": "https://www.kurion.co.jp/\n\nYashikida-83-2 Nishikicho Kadoya, Semboku, Akita 014-0515日本",
+     "note": "JALAN",
+     "payment": "￥17,650 現場付款",
+     "map": "https://maps.app.goo.gl/DMDT8L9jhaFwymcs9"
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "title": "Day 4（10/23 五）｜田澤湖 → 乳頭溫泉鄉（日歸）→ 弘前",
+   "summary": "鶴の湯日歸溫泉（免預約現場付款）→ 北上進入青森弘前",
+   "drive": "田澤湖→乳頭溫泉鄉約30–40分；乳頭溫泉鄉→弘前約2–2.5小時 ≈ 總計約2.5–3小時",
+   "warnings": [
+    "乳頭溫泉鄉7間旅館10/23、10/24住宿已全滿（僅休暇村10/24尚有空房），故本日安排為「日歸溫泉」，不留宿。",
+    "鶴の湯日歸入浴：不需預約，現場付費即可；營業10:00–15:00；每週一定休（遇假日順延翌日），10/23為星期五不受影響。"
+   ],
+   "items": [
+    {
+     "time": "10:00",
+     "type": "交通",
+     "name": "角館 → 田澤湖 辰子像",
+     "detail": "開車約20分鐘",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/CjoPiWkvzbe654Nk8"
+    },
+    {
+     "time": "11:00",
+     "type": "交通",
+     "name": "田澤湖 → 乳頭溫泉鄉",
+     "detail": "開車約30–40分鐘，山路較窄，建議白天前往",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "11:00",
+     "type": "體驗",
+     "name": "鶴の湯溫泉 日歸入浴",
+     "detail": "乳頭溫泉鄉最古老秘湯，白濁溫泉+茅草屋建築，日歸入浴不需預約，現場付款",
+     "parking": "溫泉自有免費停車場，可停數十台",
+     "ref": "電話：0187-46-2139（如需事先確認可致電）",
+     "note": "建議10:30–11:00抵達，避開中午用餐尖峰人潮",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/tR7iGKnL6Po3mD8N6"
+    },
+    {
+     "time": "12:00",
+     "type": "餐廳",
+     "name": "鶴の湯食堂午餐",
+     "detail": "名物「山の芋鍋」、岩魚烤魚、山菜蕎麥麵、陣場豆腐，日歸客可直接在食堂用餐，不需另外預約",
+     "parking": "同上（溫泉自有停車場）",
+     "ref": "—",
+     "note": "用餐尖峰12:00–13:00人多，可提早或延後半小時",
+     "payment": ""
+    },
+    {
+     "time": "13:30",
+     "type": "交通",
+     "name": "乳頭溫泉鄉 → 弘前",
+     "detail": "開車約2–2.5小時，走國道13號經大館往弘前方向",
+     "parking": "—",
+     "ref": "—",
+     "note": "此路段是必經幹道，非繞路",
+     "payment": ""
+    },
+    {
+     "time": "16:00",
+     "type": "抵達",
+     "name": "Guest House Chara",
+     "detail": "check-in休息，晚上可先逛市區熟悉環境",
+     "parking": "飯店多附設停車場",
+     "ref": "青森縣, 弘前, 2-8-2 Aoyama, 日本\n+8190-6628-1024",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/o3143yHqm1QyYDxs8"
+    },
+    {
+     "time": "18:30",
+     "type": "餐廳",
+     "name": "創作郷土料理の店 菊富士本店",
+     "detail": "已預訂",
+     "parking": "依餐廳位置就近停車",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/3ivSFkpSiQXCk1fb9"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "Guest House Chara",
+     "detail": "Guest House Chara booking.com",
+     "parking": "",
+     "ref": "青森縣, 弘前, 2-8-2 Aoyama, 日本\n+8190-6628-1024",
+     "note": "Airbnb",
+     "payment": "￥24900  (Citibank Debit Ying)\n\"\n2026年10月18日前（不含當日）可免費取消\"",
+     "map": "https://maps.app.goo.gl/o3143yHqm1QyYDxs8"
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "title": "Day 5（10/24 六）｜弘前 → 黑石 → 青森市（第1晚）",
+   "summary": "弘前城賞紅葉 → 蘋果公園 → 黑石觀光果園採摘 → 青森市入住",
+   "drive": "弘前→黑石約30分；黑石→青森市約40分 ≈ 總計約1.5小時",
+   "warnings": [
+    "10月中旬~11月中旬為「弘前城菊と紅葉まつり」期間，人潮車潮都大增，建議上午9點前抵達。"
+   ],
+   "items": [
+    {
+     "time": "9:00",
+     "type": "景點",
+     "name": "弘前市蘋果公園",
+     "detail": "大片蘋果園區，可散步賞景，部分設施有蘋果甜點販售",
+     "parking": "公園自有免費停車場",
+     "ref": "https://www.hirosaki-kanko.or.jp/",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/XYVsMw3Vzpg8t2Ld6"
+    },
+    {
+     "time": "11:00",
+     "type": "景點",
+     "name": "景點",
+     "detail": "弘前煉瓦倉庫美術館\n青森銀行紀念館\n舊東奥義塾外人教師館\n舊弘前市立圖書館",
+     "parking": "",
+     "ref": "",
+     "note": "—",
+     "payment": "",
+     "detailMap": "https://maps.app.goo.gl/N4DQcPeUiB5G1Unx5"
+    },
+    {
+     "time": "12:00",
+     "type": "餐廳",
+     "name": "Restaurant Yamazaki",
+     "detail": "要預約",
+     "parking": "",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/JTnWEswKuXUBkDS16"
+    },
+    {
+     "time": "14:00",
+     "type": "體驗",
+     "name": "大正浪漫喫茶室",
+     "detail": "蘋果批",
+     "parking": "",
+     "ref": "https://www.hirosaki-kanko.or.jp/edit.html?id=taishoroman_cafe",
+     "note": "",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/cM7ThNKxHxq5BugN7"
+    },
+    {
+     "time": "16:30",
+     "type": "交通",
+     "name": "弘前 → 青森市",
+     "detail": "開車約40分鐘",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "",
+     "type": "餐廳",
+     "name": "味之札幌大西\n味の札幌 浅利",
+     "detail": "味噌咖哩牛奶拉麵",
+     "parking": "",
+     "ref": "",
+     "note": "",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/YRdt3GPgLDypRwC76"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "最多可容納8人團體旅程- Kamiya",
+     "detail": "鮨処あすか 新町店",
+     "parking": "",
+     "ref": "",
+     "note": "Airbnb",
+     "payment": "Yu DSB (HK$2922.23)\n\n系統將於10月11日向你收取$2922.23 HKD。\n我們會於10月8日向你發送提醒。",
+     "detailMap": "https://maps.app.goo.gl/Gns9HWhSeFroadnx5"
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "title": "Day 6（10/25 日）｜青森市內悠閒一日（第2晚）",
+   "summary": "不需長途開車，市區景點慢慢逛：ASPAM、青い森わんど、A-FACTORY",
+   "drive": "市區內移動，全日開車時間＜1小時",
+   "warnings": [],
+   "items": [
+    {
+     "time": "",
+     "type": "餐廳",
+     "name": "青森魚菜中心「買る・盛る・食べる」自助海鮮丼形式",
+     "detail": "自製海鮮丼",
+     "parking": "ASPAM及A-FACTORY周邊皆有付費停車場，建議一次停好車步行逛完整片區",
+     "ref": "青森魚菜中心：https://nokkedon.jp/",
+     "note": "部分攤位傍晚提早收攤，建議晚餐前先確認營業時間",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/cFZuN9whci8TUte48"
+    },
+    {
+     "time": "",
+     "type": "",
+     "name": "廣田神社",
+     "detail": "",
+     "parking": "",
+     "ref": "",
+     "note": "",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/rH2963aD2QJUM7P78"
+    },
+    {
+     "time": "",
+     "type": "備用",
+     "name": "睡魔之家 WA・RASSE（可選）",
+     "detail": "室內展示睡魔祭花車，適合天氣不好時的備案，室內景點無熊患風險",
+     "parking": "設施自有付費停車場",
+     "ref": "https://www.nebuta.jp/warasse/",
+     "note": "如時間充裕或天氣不佳可加入",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/VfGMxPDr6RU2Coe48"
+    },
+    {
+     "time": "10:00",
+     "type": "景點",
+     "name": "青森県觀光物產館 ASPAM",
+     "detail": "三角形地標建築，內有青森物產、展望台可眺望陸奧灣",
+     "parking": "自有付費地下停車場",
+     "ref": "https://www.aspm.jp/",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/LmHgjtMVF54p6zTR6"
+    },
+    {
+     "time": "14:30",
+     "type": "景點／購物",
+     "name": "A-FACTORY",
+     "detail": "蘋果氣泡酒工房+市集，可買伴手禮、試喝蘋果氣泡酒",
+     "parking": "緊鄰青森車站周邊付費停車場",
+     "ref": "https://www.a-factory.co.jp/",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/MBXJ6d63Qn1bHNQj9"
+    },
+    {
+     "time": "12:00",
+     "type": "餐廳",
+     "name": "青森市區午餐",
+     "detail": "可於ASPAM或A-FACTORY周邊解決\n鰻魚料理 - 川よし 星期一 休息\n濃厚沙丁魚乾湯底：煮干拉麵（煮干しラーメン）",
+     "parking": "同上",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "detailMap": "https://maps.app.goo.gl/2xXW8FvrjdBrHQBb6"
+    },
+    {
+     "time": "",
+     "type": "景點",
+     "name": "青森港邊親水公園",
+     "detail": "散步賞景，適合悠閒行程",
+     "parking": "周邊路邊停車格／鄰近付費停車場",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/uyf7paT7DHH5Dx2S8"
+    },
+    {
+     "time": "",
+     "type": "下午茶",
+     "name": "青い森わんど （可選）",
+     "detail": "蘋果鹹食醬料",
+     "parking": "",
+     "ref": "",
+     "note": "",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/jnGZepxQrRtwNx7r9"
+    },
+    {
+     "time": "",
+     "type": "餐廳",
+     "name": "炉端とおでん 呼炉凪来 青森駅前店",
+     "detail": "未訂位",
+     "parking": "",
+     "ref": "",
+     "note": "",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/SYGHxcNvVS7v324S8"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "最多可容納8人團體旅程- Kamiya",
+     "detail": "",
+     "parking": "",
+     "ref": "",
+     "note": "Airbnb",
+     "payment": "Yu DSB (HK$2922.23)\n\n系統將於10月11日向你收取$2922.23 HKD。\n我們會於10月8日向你發送提醒。"
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "title": "Day 7（10/26 一）｜青森市 → 八甲田 → 奧入瀨溪流",
+   "summary": "早出搶纜車頭班 → 奧入瀨溪流精華段賞紅葉 → 十和田湖畔過夜",
+   "drive": "青森市→八甲田約1小時；八甲田→奧入瀨約1–1.5小時 ≈ 總計約2–2.5小時（山路彎多，已預留緩衝）",
+   "warnings": [
+    "官方最新公告（十和田奧入瀨觀光機構，2026/3/26發布）：2026年度奧入瀨マイカー交通規制已提前至9月7日–13日實施（過去慣例為10月下旬），10/26行經時不受影響，可正常開車進入渓流區間，無需改搭接駁。出發前仍建議致電十和田奧入瀨觀光機構（0176-24-3006）做最後確認。",
+    "10月下旬是八甲田纜車紅葉極盛期／末期與排隊高峰，強烈建議08:00前出發搶第一批纜車，避免1–2小時排隊。"
+   ],
+   "items": [
+    {
+     "time": "07:30",
+     "type": "交通",
+     "name": "青森市出發 → 八甲田",
+     "detail": "開車約1小時，走國道103號",
+     "parking": "—",
+     "ref": "—",
+     "note": "務必早出發，避開纜車排隊人潮",
+     "payment": ""
+    },
+    {
+     "time": "08:30 - 9:30",
+     "type": "景點",
+     "name": "八甲田纜車（八甲田ロープウェー）",
+     "detail": "搭乘至山頂公園駅賞紅葉，僅搭纜車、不建議額外走山頂自然步道（熊出沒風險）",
+     "parking": "山麓站自有大型付費停車場，容量足夠",
+     "ref": "https://www.hakkoda-ropeway.jp/",
+     "note": "2026年6月該區曾發生兩起熊傷人事件，請勿脫隊進入林道",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/aa4xpsREm2PGM2Su7"
+    },
+    {
+     "time": "11:00",
+     "type": "交通",
+     "name": "八甲田 → 奧入瀨溪流",
+     "detail": "開車約1–1.5小時，國道103號轉102號，山路彎多請減速慢行",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "11:00 - 12:30",
+     "type": "餐廳",
+     "name": "奧入瀨溪流溫泉周邊午餐",
+     "detail": "山菜蕎麥麵、岩魚定食等溪流料理",
+     "parking": "溫泉街周邊小型停車場",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/GxGUzjbN7jXMzWx79"
+    },
+    {
+     "time": "12:30",
+     "type": "JR Bus",
+     "name": "車停在石ヶ戸",
+     "detail": "轉乘 JR Bus 到雲井の滝 (12:09, 13:09, 14:07 有車)\n沿路走回石ヶ戸",
+     "parking": "石ヶ戸36台（無料）",
+     "ref": "",
+     "note": "",
+     "payment": "",
+     "parkingMap": "https://maps.app.goo.gl/dXF8CWgGCeGHUE6f8"
+    },
+    {
+     "time": "13:30",
+     "type": "景點",
+     "name": "奧入瀨溪流精華段",
+     "detail": "重點景觀：石ヶ戸の瀬、銚子大滝、阿修羅之流、雲井の滝，沿停車點短程賞景，不建議深入健行",
+     "parking": "石ヶ戸36台（無料）、銚子大滝10台，容量小，熱門時段（11:00–15:00）易滿，建議挑清晨或傍晚時段",
+     "ref": "官方資訊：https://www.eco-oirase.com/",
+     "note": "紅葉季單日人潮可達20萬人次，請留意人身與行車安全",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/XNnfbQ8AphZ5Pvvc6"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "Jalan Yuze Hotel Resort",
+     "detail": "",
+     "parking": "依旅館安排，多數提供住客停車位",
+     "ref": "JALAN",
+     "note": "官網預訂",
+     "payment": "¥42200 現場付款",
+     "map": "https://maps.app.goo.gl/vBJgt9SkcCeTeTZE7"
+    }
+   ],
+   "bus": {
+    "title": "JR巴士 石ヶ戸 → 雲井の滝 時刻表",
+    "mapUrl": "https://maps.app.goo.gl/zeNDravTbPAh6u4HA",
+    "times": [
+     {
+      "depart": "8:53",
+      "arrive": "8:59"
+     },
+     {
+      "depart": "9:39",
+      "arrive": "9:45"
+     },
+     {
+      "depart": "10:19",
+      "arrive": "10:25"
+     },
+     {
+      "depart": "11:09",
+      "arrive": "11:15"
+     },
+     {
+      "depart": "11:44",
+      "arrive": "11:50"
+     },
+     {
+      "depart": "12:09",
+      "arrive": "12:15"
+     },
+     {
+      "depart": "13:09",
+      "arrive": "13:15"
+     },
+     {
+      "depart": "14:07",
+      "arrive": "14:13"
+     },
+     {
+      "depart": "14:29",
+      "arrive": "14:35"
+     },
+     {
+      "depart": "15:14",
+      "arrive": "15:20"
+     }
+    ]
+   }
+  },
+  {
+   "day": 8,
+   "title": "Day 8（10/27 二）｜奧入瀨 → 八幡平 → 盛岡",
+   "summary": "八幡平アスピーテライン兜風賞景 → 盛岡椀子蕎麥麵晚餐",
+   "drive": "奧入瀨→八幡平約1.5小時；八幡平→盛岡約1小時 ≈ 總計約2.5小時",
+   "warnings": [
+    "八幡平アスピーテライン10月中旬起有夜間封路（每年約17:00–隔日08:30），歷年全面冬季封路約落在11月4–5日傍晚，10/27白天通行應無虞，但務必17:00前通過山頂路段。出發前請致電八幡平市觀光協會（0195-78-3500）做最後確認。",
+    "八幡平紅葉最佳觀賞期實為9月下旬~10月中旬，10/27山頂葉況可能已進入尾聲甚至落葉，請降低賞葉期待，改以兜風賞景為主；若當年路面已開始結冰，備案改走海拔較低的松川溪谷（松川溫泉、玄武洞）方向前往盛岡。"
+   ],
+   "items": [
+    {
+     "time": "08:30",
+     "type": "交通",
+     "name": "Yuze Hotel Resort → 八幡平",
+     "detail": "開車約 1 小時",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "9:30",
+     "type": "景點",
+     "name": "八幡平アスピーテライン兜風",
+     "detail": "Yuze Hotel Resort\nCamel Mart Akita Hachimantai\n大深沢展望台\nHachimantai Observation Deck\nGenta-iwa Observation Deck\n八幡平アスピーテライン展望所\n御在所 ﾊﾞﾘｱﾌﾘｰ公衆トイレ\n松川玄武岩駐車場\n松川溪谷\n焼走り溶岩流駐車場\n盛岡市",
+     "parking": "見返峠駐車場約107台，付費約¥500",
+     "ref": "https://www.hachimantai.or.jp/",
+     "note": "務必於17:00前完成八幡平山頂路段通行",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/EUbw4dieyYPATAXr5"
+    },
+    {
+     "time": "12:30",
+     "type": "交通",
+     "name": "焼走り溶岩流駐車場 → 盛岡",
+     "detail": "開車約 0.5 小時",
+     "parking": "—",
+     "ref": "—",
+     "note": "",
+     "payment": ""
+    },
+    {
+     "time": "13:00",
+     "type": "餐廳",
+     "name": "盛岡冷麵",
+     "detail": "元祖 平壌冷麺 食道園",
+     "parking": "盛楼閣",
+     "ref": "ぴょんぴょん舎 盛岡駅前店",
+     "note": "—",
+     "payment": "",
+     "detailMap": "https://maps.app.goo.gl/MFSx9mGY7RQY9REL8",
+     "parkingMap": "https://maps.app.goo.gl/BNb6v9kyo4zWSY5D7",
+     "refMap": "https://maps.app.goo.gl/BNAmPfM7tjx3ab6A6"
+    },
+    {
+     "time": "14:30",
+     "type": "景點",
+     "name": "盛岡城跡公園\n開運橋\n岩手銀行紅磚館\n櫻山神社\n紺屋町番屋\n盛岡車站伴手禮街",
+     "detail": "免費開放，市區內散步賞景",
+     "parking": "公園周邊有付費停車場",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/w8rF3dsAQ1HiM9px7"
+    },
+    {
+     "time": "",
+     "type": "",
+     "name": "Aeon 盛岡南\nMont bell 盛岡南 2/F",
+     "detail": "還防熊噴霧",
+     "parking": "",
+     "ref": "",
+     "note": "",
+     "payment": ""
+    },
+    {
+     "time": "18:00",
+     "type": "self dinner",
+     "name": "",
+     "detail": "Aeon Town 盛岡駅前",
+     "parking": "Aeon Mall Morioka イオンモール盛岡",
+     "ref": "永旺夢樂城盛岡南",
+     "note": "—",
+     "payment": "",
+     "detailMap": "https://maps.app.goo.gl/xBuWfQXFfKXmneoY8",
+     "parkingMap": "https://maps.app.goo.gl/mQa56iyxTDhRzXpaA",
+     "refMap": "https://maps.app.goo.gl/Rzu1biFfWqKtF5sC6"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "在日本IwateMorioka的出租單位",
+     "detail": "一般飯店即可",
+     "parking": "訂房時確認附設停車場",
+     "ref": "https://www.airbnb.com.hk/rooms/1430748842975903584?unique_share_id=841f3e38-6c84-4d19-852d-3ef066c53dd4&check_in=2026-10-27&check_out=2026-10-28&adults=3&s=67&source_impression_id=p3_1790484118_P3ki3zQislEG2DNU",
+     "note": "Airbnb",
+     "payment": "Yu DSB (HK$1146.99)\n\n在10⽉22⽇下午3:00前可免費取消訂單。在此限期後，訂單將不設退款。"
+    }
+   ]
+  },
+  {
+   "day": 9,
+   "title": "Day 9（10/28 三）｜盛岡 → 平泉 → 嚴美溪 → 猊鼻溪 → 一關",
+   "summary": "中尊寺金色堂世界遺產 → 毛越寺 → 嚴美溪郭公屋 → 猊鼻溪乘船 → 前澤牛燒肉晚餐",
+   "drive": "盛岡→平泉約1小時；平泉→嚴美溪約20分；嚴美溪→猊鼻溪約25分；猊鼻溪→一關約15分 ≈ 總計約2小時",
+   "warnings": [],
+   "items": [
+    {
+     "time": "9:00",
+     "type": "交通",
+     "name": "盛岡出發 → 平泉猊鼻溪",
+     "detail": "開車約1小時20分，走東北自動車道",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "10:30",
+     "type": "景點",
+     "name": "猊鼻溪乘船\n13:00\n14:00\n15:00\n16:00",
+     "detail": "船夫撐篙遊覽溪谷，賞紅葉，來回約1.5小時",
+     "parking": "乘船處自有付費停車場（約¥300–500/日），旺季週末建議提早抵達",
+     "ref": "https://geibikei.co.jp/",
+     "note": "建議事先致電確認當日末班船時間",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/W3U3D4tuymHaQ5sT8"
+    },
+    {
+     "time": "12:30",
+     "type": "餐廳",
+     "name": "",
+     "detail": "三彩館ふじせい - もち＆和食 一関・平泉の郷土料理",
+     "parking": "和風レストラン 松竹",
+     "ref": "029満家食堂 食堂與定食餐廳",
+     "note": "",
+     "payment": "",
+     "detailMap": "https://maps.app.goo.gl/Zy2iD16i5JKbs4pR6",
+     "parkingMap": "https://maps.app.goo.gl/tTdosWCrq3u18RTh9",
+     "refMap": "https://maps.app.goo.gl/v2pmcqCfcMkmYzc76"
+    },
+    {
+     "time": "13:00",
+     "type": "景點／餐廳",
+     "name": "嚴美溪＋郭公屋",
+     "detail": "溪谷奇岩景觀，名物是用滑輪索道將糰子送到對岸山谷的「飛び団子」，體驗感十足",
+     "parking": "溪谷周邊有免費公共停車場，容量中等，非假日通常夠用",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/Wdf8Bw3xpUNVxsmJ9"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "厳美渓温泉 いつくし園",
+     "detail": "開車約15分鐘",
+     "parking": "—",
+     "ref": "JALAN",
+     "note": "¥ 現場付款",
+     "payment": "¥ 38610 現場付款",
+     "map": "https://maps.app.goo.gl/yaDEfAD68YfTj34o6"
+    }
+   ]
+  },
+  {
+   "day": 10,
+   "title": "Day 10（10/29 四）｜一關 → 松島（全日深度遊覽）",
+   "summary": "瑞巖寺／五大堂 → 松島遊船 → 円通院賞紅葉夜楓點燈 → 松島吃蠔",
+   "drive": "一關→松島約1.5–2小時；抵達後全日皆在松島市內步行/短程移動",
+   "warnings": [
+    "松島紅葉整體見頃為10月下旬~11月中旬（部分資料指下旬~11月下旬），10/29抵達正值賞楓season開端，時機很好。",
+    "円通院本身無自設停車場，需停國道45號沿線的縣營停車場再步行約5分鐘；2026年紅葉夜間點燈期間為10/24–11/23，17:30–21:00，正好涵蓋本次到訪日期。"
+   ],
+   "items": [
+    {
+     "time": "9:00",
+     "type": "交通",
+     "name": "一關出發 → 松島",
+     "detail": "開車約1.5–2小時",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "11:00",
+     "type": "景點",
+     "name": "瑞巖寺／五大堂",
+     "detail": "日本三景松島代表寺院，伊達政宗家族淵源",
+     "parking": "松島海岸周邊有多個付費停車場",
+     "ref": "https://zuiganji.or.jp/",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "12:00",
+     "type": "餐廳",
+     "name": "松島魚市場午餐",
+     "detail": "かき小屋 （現蒸/現烤牡蠣吃到飽）\n漁師的海鮮丼\n海鮮・浜焼き 牡蠣将（現場碳烤海鮮）",
+     "parking": "同上",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "15:00",
+     "type": "休息",
+     "name": "松島海岸散步／伴手禮店",
+     "detail": "沿岸眺望島嶼景觀，順道逛街",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "16:00",
+     "type": "景點",
+     "name": "松島遊船",
+     "detail": "遊覽松島灣諸島，多種航線可選\n9 am - 4pm 整點有船",
+     "parking": "碼頭周邊付費停車場，容量尚可",
+     "ref": "https://www.matsushima.or.jp/",
+     "note": "建議挑15:30前的航班，避開末班船",
+     "payment": "¥ 38610 現場付款"
+    },
+    {
+     "time": "17:30",
+     "type": "景點",
+     "name": "円通院 紅葉夜楓點燈",
+     "detail": "本堂前「心字池」紅葉倒影點燈為最大看點，庭園由小堀遠州作庭，苔蘚配紅葉氛圍極佳",
+     "parking": "円通院無停車場，需停國道45號沿線縣營停車場，步行約5分鐘",
+     "ref": "電話：022-354-3206\nhttps://www.entuuin.or.jp/lightup/2026/",
+     "note": "拜觀料大人¥500，夜間參拜另計約¥1300；心字池拍照禁用三腳架/自拍棒",
+     "payment": ""
+    },
+    {
+     "time": "19:00",
+     "type": "餐廳",
+     "name": "松島吃蠔晚餐",
+     "detail": "松島海岸周邊多間牡蠣專門店/牡蠣小屋，10月正值牡蠣季節開始",
+     "parking": "依店家位置就近停車",
+     "ref": "—",
+     "note": "廻鮮寿司塩釜港 塩釜店",
+     "payment": "",
+     "noteMap": "https://maps.app.goo.gl/fNuYeGj4rAfm9uCKA"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "松島温泉 ホテル 絶景の館",
+     "detail": "建議選擇能看海景的旅館",
+     "parking": "依旅館安排",
+     "ref": "JALAN",
+     "note": "—",
+     "payment": "¥  27075 現場付款",
+     "map": "https://maps.app.goo.gl/ZqUvK6m4ev2N8aYJA"
+    }
+   ]
+  },
+  {
+   "day": 11,
+   "title": "Day 11（10/30 五）｜松島 → 鹽釜 → 仙台市區大採購 → 仙台Outlet",
+   "summary": "鹽釜魚市場早市 → 仙台一番町／クリスロード拱廊商店街補貨 → 仙台泉Outlet",
+   "drive": "松島→鹽釜約20分；鹽釜→仙台市區約30分；仙台市區→仙台Outlet約30分 ≈ 總計約1.5–2小時",
+   "warnings": [
+    "本日已拿掉瑞鳳殿、定禅寺通り等寺廟／散步景點，全日改為純逛街購物行程。"
+   ],
+   "items": [
+    {
+     "time": "9:00",
+     "type": "交通",
+     "name": "松島 → 鹽釜",
+     "detail": "開車約20分鐘",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "9:30",
+     "type": "景點／餐廳",
+     "name": "鹽釜魚市場",
+     "detail": "鹽釜是日本鮪魚水揚量數一數二的漁港，市場內「早市喰らい処」等仲卸直營食堂可吃到超新鮮鮪魚丼、海鮮丼，CP值高",
+     "parking": "市場自有停車場，假日人潮多，建議上午時段前往，越晚攤位越多收攤",
+     "ref": "https://www.shiogama-uodara.jp/",
+     "note": "強力推薦，比松島魚市場CP值更高",
+     "payment": ""
+    },
+    {
+     "time": "11:30",
+     "type": "交通",
+     "name": "鹽釜 → AEON影城 新利府",
+     "detail": "開車約30分鐘",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "12:30",
+     "type": "餐廳",
+     "name": "AEON影城 新利府\n午餐",
+     "detail": "",
+     "parking": "",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "13:30",
+     "type": "購物",
+     "name": "一番町／クリスロード拱廊商店街",
+     "detail": "仙台最大商店街，全天候拱廊不怕下雨，內有唐吉訶德（驚安の殿堂）、多間藥妝店（松本清、Welcia等）、100円店、伴手禮店，補貨最方便的一站",
+     "parking": "商店街本身無停車場，建議停「仙台PARCO駐車場」或市區公共付費停車場，步行進入拱廊街",
+     "ref": "—",
+     "note": "藥妝店、唐吉訶德通常都有免稅櫃台，記得帶護照",
+     "payment": ""
+    },
+    {
+     "time": "15:00",
+     "type": "購物",
+     "name": "仙台PARCO／エスパル仙台",
+     "detail": "車站直結的百貨商場，Uniqlo、GU、無印良品等品牌齊全，エスパル內也有超市可買零食伴手禮",
+     "parking": "PARCO自有付費停車場；若選エスパル可利用仙台車站周邊停車場",
+     "ref": "PARCO：https://sendai.parco.jp/｜エスパル仙台：https://www.esparial.co.jp/",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "16:00",
+     "type": "購物",
+     "name": "超市補貨（藤崎百貨地下超市／成城石井等）",
+     "detail": "買零食、伴手禮、當地限定商品，車站周邊超市選擇多",
+     "parking": "同上，車站周邊停車場",
+     "ref": "—",
+     "note": "可視時間彈性安排，也可放到Day12早上仙台朝市一起補完",
+     "payment": ""
+    },
+    {
+     "time": "19:30",
+     "type": "餐廳",
+     "name": "仙台市區晚餐",
+     "detail": "仔虎燒肉",
+     "parking": "牛刺しと焼肉 仔虎 クリスロード店",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "detailMap": "https://maps.app.goo.gl/qE99fbUcP9zQXXvR9",
+     "parkingMap": "https://maps.app.goo.gl/MQKyekEnhpqHXD9o6"
+    },
+    {
+     "time": "晚上",
+     "type": "住宿",
+     "name": "Kunimaru先生的公寓",
+     "detail": "建議選在機場周邊或市區交通方便處，方便隔天從容還車",
+     "parking": "訂房時確認附設停車場",
+     "ref": "Airbnb",
+     "note": "—",
+     "payment": "Yu DSB (HK$957)"
+    }
+   ]
+  },
+  {
+   "day": 12,
+   "title": "Day 12（10/31 六）｜仙台朝市 → 仙台機場",
+   "summary": "早起逛仙台朝市 → 從容還車 → 15:00起飛返港",
+   "drive": "仙台市區→仙台機場約30分",
+   "warnings": [],
+   "items": [
+    {
+     "time": "07:00",
+     "type": "景點／餐廳",
+     "name": "仙台朝市",
+     "detail": "05:00左右陸續開市，多為海鮮、蔬果、熟食小吃，適合當早餐或買伴手禮，多數店家17:00–18:00收攤，早上時段最新鮮",
+     "parking": "朝市周邊多為付費停車場，車位有限，建議先開車去還車後改搭電車/計程車回程逛朝市，或視飯店距離安排先繞過去",
+     "ref": "https://www.sendai-asaichi.jp/",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "09:30",
+     "type": "交通",
+     "name": "仙台市區 → 仙台機場",
+     "detail": "開車約30分鐘",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "10:00",
+     "type": "還車",
+     "name": "仙台機場還車",
+     "detail": "檢查車況、確認油量/里程，領取還車確認單",
+     "parking": "機場租車中心備有還車專屬車道",
+     "ref": "依租用之租車公司為準",
+     "note": "從容辦理，預留緩衝以防排隊",
+     "payment": ""
+    },
+    {
+     "time": "11:00",
+     "type": "交通",
+     "name": "辦理登機、通關",
+     "detail": "15:00起飛，建議提早2–3小時到機場辦理",
+     "parking": "—",
+     "ref": "—",
+     "note": "—",
+     "payment": ""
+    },
+    {
+     "time": "15:00",
+     "type": "交通",
+     "name": "SDJ → HKG 起飛",
+     "detail": "航程約4小時40分",
+     "parking": "—",
+     "ref": "—",
+     "note": "行程結束，平安回家",
+     "payment": ""
+    }
+   ]
+  }
+ ],
+ "cost": {
+  "hotels": [
+   {
+    "day": "Day 1",
+    "name": "奥州秋保温泉 蘭亭",
+    "jpy": "¥22,590",
+    "hkd": "$1,295",
+    "meal": "dinner"
+   },
+   {
+    "day": "Day 2",
+    "name": "蔵王四季のホテル",
+    "jpy": "¥94,500",
+    "hkd": "$4,725",
+    "meal": ""
+   },
+   {
+    "day": "Day 3",
+    "name": "西木温泉ふれあいプラザクリオン",
+    "jpy": "¥17,650",
+    "hkd": "$883",
+    "meal": ""
+   },
+   {
+    "day": "Day 4",
+    "name": "Guest House Chara",
+    "jpy": "¥24,900",
+    "hkd": "$1,245",
+    "meal": ""
+   },
+   {
+    "day": "Day 5 & 6",
+    "name": "最多可容納8人團體旅程- Kamiya",
+    "jpy": "",
+    "hkd": "$2,922",
+    "meal": ""
+   },
+   {
+    "day": "Day 7",
+    "name": "Jalan Yuze Hotel Resort",
+    "jpy": "¥42,200",
+    "hkd": "$2,210",
+    "meal": ""
+   },
+   {
+    "day": "Day 8",
+    "name": "在日本IwateMorioka的出租單位",
+    "jpy": "",
+    "hkd": "$1,147",
+    "meal": ""
+   },
+   {
+    "day": "Day 9",
+    "name": "厳美渓温泉 いつくし園",
+    "jpy": "¥38,610",
+    "hkd": "$1,931",
+    "meal": ""
+   },
+   {
+    "day": "Day 10",
+    "name": "松島温泉 ホテル 絶景の館",
+    "jpy": "¥27,075",
+    "hkd": "$1,354",
+    "meal": ""
+   },
+   {
+    "day": "Day 11",
+    "name": "Kunimaru先生的公寓",
+    "jpy": "",
+    "hkd": "$957",
+    "meal": ""
+   }
+  ],
+  "flights": [
+   {
+    "day": "Day 1",
+    "note": "dinner",
+    "hkd": "$7,766"
+   },
+   {
+    "day": "Day 2",
+    "note": "",
+    "hkd": "$3,123"
+   }
+  ],
+  "rental": [
+   {
+    "item": "車資",
+    "jpy": "¥145,515",
+    "hkd": "$7,276"
+   },
+   {
+    "item": "ETC 卡租借",
+    "jpy": "¥2,420",
+    "hkd": "$121"
+   },
+   {
+    "item": "標準方案保險 '+NOC = 全面支持計劃(フルサポートプラン))",
+    "jpy": "¥24,200",
+    "hkd": "$1,210"
+   },
+   {
+    "item": "NOC",
+    "jpy": "¥6,050",
+    "hkd": "$303"
+   },
+   {
+    "item": "雪胎",
+    "jpy": "¥26,400",
+    "hkd": "$1,320"
+   },
+   {
+    "item": "汽油費用",
+    "jpy": "¥12,000",
+    "hkd": "$600"
+   },
+   {
+    "item": "ETC 過路費",
+    "jpy": "$13,000",
+    "hkd": "$650"
+   }
+  ],
+  "totals": {
+   "hotelHKD": "$18,668",
+   "flightHKD": "$10,889",
+   "rentalHKD": "$10,829"
+  },
+  "tolls": [
+   {
+    "day": "Day1",
+    "segment": "無",
+    "amount": "¥0"
+   },
+   {
+    "day": "Day2",
+    "segment": "藏王ハイライン（確定）",
+    "amount": "¥600"
+   },
+   {
+    "day": "Day3",
+    "segment": "東北中央自動車道105.1km",
+    "amount": "約¥3,050"
+   },
+   {
+    "day": "Day4",
+    "segment": "推估約100km混合段",
+    "amount": "約¥2,900"
+   },
+   {
+    "day": "Day5–6",
+    "segment": "無（尚未驗證，推估免費）",
+    "amount": "¥0"
+   },
+   {
+    "day": "Day7",
+    "segment": "前段小額不明收費路段＋後段十和田IC→鹿角八幡平IC約20-25km",
+    "amount": "約¥700–1,000"
+   },
+   {
+    "day": "Day8",
+    "segment": "東北自動車道32.2km（確定）",
+    "amount": "¥930"
+   },
+   {
+    "day": "Day9",
+    "segment": "東北自動車道73.9km（確定）",
+    "amount": "¥2,150"
+   },
+   {
+    "day": "Day10",
+    "segment": "東北自動車道63.8km（確定）",
+    "amount": "¥1,850"
+   },
+   {
+    "day": "Day11",
+    "segment": "無",
+    "amount": "¥0"
+   },
+   {
+    "day": "Day12",
+    "segment": "尚未提供（推估比照Day1，可能為¥0）",
+    "amount": "待確認，估¥0–400"
+   }
+  ],
+  "tollNotes": [
+   "全程12天預估總過路費：約 ¥12,180–12,980",
+   "預估整趟12天行程會消耗約70公升汽油，總油費約¥11,500–13,000（中間值約¥12,000）"
+  ]
+ },
+ "spots": [
+  {
+   "county": "宮城縣",
+   "day": "Day1",
+   "name": "青葉城址（仙台城跡）",
+   "type": "景點",
+   "detail": "伊達政宗騎馬像地標，可俯瞰仙台市",
+   "ref": "https://www.sendaijyo.com/",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/pLDMaLPvrkG5K9os5"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day1/11",
+   "name": "仙台牛舌（利久／伊達の牛たん本舗）",
+   "type": "餐廳",
+   "detail": "仙台代表美食，牛舌定食",
+   "ref": "利久：https://www.rikyu-gyutan.co.jp/",
+   "note": "尖峰時段建議預約"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day2",
+   "name": "磊々峡",
+   "type": "景點",
+   "detail": "秋保溫泉旁溪谷，奇岩+吊橋+紅葉",
+   "ref": "仙台觀光情報：https://www.sentabi.jp/",
+   "note": "不需預約，免費",
+   "map": "https://maps.app.goo.gl/8MGtsGk1xasuPYMR9"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day10",
+   "name": "瑞巖寺／五大堂",
+   "type": "景點",
+   "detail": "日本三景松島代表寺院",
+   "ref": "https://zuiganji.or.jp/",
+   "note": "不需預約"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day10",
+   "name": "松島吃蠔",
+   "type": "餐廳",
+   "detail": "海岸周邊牡蠣專門店/牡蠣小屋",
+   "ref": "—",
+   "note": "10月為牡蠣季開始，旺季建議先查排隊狀況"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day11",
+   "name": "松島遊船",
+   "type": "景點",
+   "detail": "遊覽松島灣諸島",
+   "ref": "https://www.matsushima.or.jp/",
+   "note": "建議上午搭乘"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day11",
+   "name": "松島魚市場",
+   "type": "餐廳",
+   "detail": "海鮮丼、伴手禮",
+   "ref": "—",
+   "note": "—"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day11",
+   "name": "鹽釜魚市場",
+   "type": "餐廳",
+   "detail": "鮪魚水揚量數一數二漁港，仲卸直營食堂鮪魚丼CP值高",
+   "ref": "https://www.shiogama-uodara.jp/",
+   "note": "上午時段最佳，越晚攤位越多收攤"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day11",
+   "name": "仙台泉PREMIUM OUTLETS",
+   "type": "購物",
+   "detail": "大型Outlet商場",
+   "ref": "https://www.premiumoutlets.co.jp/sendai-izumi/",
+   "note": "不需預約"
+  },
+  {
+   "county": "宮城縣",
+   "day": "Day12",
+   "name": "仙台朝市",
+   "type": "景點／餐廳",
+   "detail": "海鮮、蔬果、熟食小吃早市，05:00開市，17:00–18:00陸續收攤",
+   "ref": "https://www.sendai-asaichi.jp/",
+   "note": "已從Day1改到Day12早上"
+  },
+  {
+   "county": "山形縣",
+   "day": "Day2/3",
+   "name": "藏王空中纜車（藏王ロープウェイ）",
+   "type": "景點",
+   "detail": "地藏山頂駅賞紅葉全景",
+   "ref": "https://zaoropeway.co.jp/",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/tKwjBb5x9SxriaHL9"
+  },
+  {
+   "county": "山形縣",
+   "day": "Day2",
+   "name": "藏王エコーライン（御釜展望）",
+   "type": "景點",
+   "detail": "開車直達展望台看火山口湖，不需健行",
+   "ref": "山形県道路情報：https://www.pref.yamagata.jp/",
+   "note": "每年約11月上旬起有冬季封閉，出發前確認"
+  },
+  {
+   "county": "山形縣",
+   "day": "Day2",
+   "name": "藏王溫泉旅館【一泊二食】",
+   "type": "住宿",
+   "detail": "本次行程唯一秘湯體驗夜，已確認尚有空房",
+   "ref": "依實際訂房確認信為準",
+   "note": "已完成訂房"
+  },
+  {
+   "county": "山形縣",
+   "day": "Day3",
+   "name": "寶珠山立石寺（山寺）",
+   "type": "景點",
+   "detail": "1000級石梯登山賞紅葉",
+   "ref": "https://www.rissyakuji.jp/",
+   "note": "重新確認加回行程"
+  },
+  {
+   "county": "山形縣",
+   "day": "Day3",
+   "name": "文翔館",
+   "type": "景點",
+   "detail": "舊縣廳舍，大正歐風建築，免費參觀",
+   "ref": "https://www.bunshokan.jp/",
+   "note": "不需預約"
+  },
+  {
+   "county": "山形縣",
+   "day": "Day3",
+   "name": "七日町ルルタス",
+   "type": "餐廳／購物",
+   "detail": "山形市區商業設施",
+   "ref": "—",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/1uyWWY471fW83F836"
+  },
+  {
+   "county": "山形縣",
+   "day": "Day3",
+   "name": "やまがた酒巡り「Chetto」",
+   "type": "體驗",
+   "detail": "山形地酒品飲處",
+   "ref": "—",
+   "note": "駕駛者請勿飲酒"
+  },
+  {
+   "county": "秋田縣",
+   "day": "Day3",
+   "name": "角館武家屋敷通り",
+   "type": "景點",
+   "detail": "陸奧小京都，武家屋敷+紅葉",
+   "ref": "https://www.city.semboku.akita.jp/",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/JdDejR2JyfMWbfuo9"
+  },
+  {
+   "county": "秋田縣",
+   "day": "Day3",
+   "name": "田澤湖",
+   "type": "景點",
+   "detail": "日本最深湖，環湖兜風",
+   "ref": "—",
+   "note": "不需預約"
+  },
+  {
+   "county": "秋田縣",
+   "day": "Day4",
+   "name": "乳頭溫泉鄉 鶴の湯（日歸）",
+   "type": "體驗",
+   "detail": "最古老秘湯，白濁溫泉，10:00–15:00，週一定休",
+   "ref": "電話：0187-46-2139",
+   "note": "不需預約，現場付款"
+  },
+  {
+   "county": "岩手縣",
+   "day": "Day8",
+   "name": "盛岡椀子蕎麥麵「東家」本店",
+   "type": "餐廳",
+   "detail": "一口一碗蕎麥麵不斷加碗體驗",
+   "ref": "https://www.wanko.co.jp/",
+   "note": "尖峰時段建議預約"
+  },
+  {
+   "county": "岩手縣",
+   "day": "Day8",
+   "name": "八幡平アスピーテライン",
+   "type": "景點",
+   "detail": "27公里絕景兜風道路",
+   "ref": "https://www.hachimantai.or.jp/",
+   "note": "10月中旬起夜間封路，11月上旬冬季封路"
+  },
+  {
+   "county": "岩手縣",
+   "day": "Day9",
+   "name": "小岩井農場",
+   "type": "景點／餐廳",
+   "detail": "大型觀光牧場，牛奶霜淇淋",
+   "ref": "https://www.koiwai.co.jp/makiba/",
+   "note": "不需預約"
+  },
+  {
+   "county": "岩手縣",
+   "day": "Day9",
+   "name": "中尊寺金色堂",
+   "type": "景點",
+   "detail": "世界遺產，需步行上坡約15–20分",
+   "ref": "https://www.chusonji.or.jp/",
+   "note": "不需預約，門票現場購買"
+  },
+  {
+   "county": "岩手縣",
+   "day": "Day9",
+   "name": "毛越寺",
+   "type": "景點",
+   "detail": "平安時代淨土庭園世界遺產",
+   "ref": "https://www.motsuji.or.jp/",
+   "note": "不需預約"
+  },
+  {
+   "county": "岩手縣",
+   "day": "Day9",
+   "name": "盛岡燒肉「大同苑」（前澤牛）",
+   "type": "餐廳",
+   "detail": "前澤牛供應量有限",
+   "ref": "—",
+   "note": "強烈建議提前預約"
+  },
+  {
+   "county": "岩手縣",
+   "day": "Day10",
+   "name": "嚴美溪＋郭公屋",
+   "type": "景點／餐廳",
+   "detail": "溪谷奇岩，滑輪索道送糰子「飛び団子」",
+   "ref": "—",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/Wdf8Bw3xpUNVxsmJ9"
+  },
+  {
+   "county": "岩手縣",
+   "day": "Day10",
+   "name": "猊鼻溪乘船",
+   "type": "景點",
+   "detail": "船夫撐篙遊覽溪谷，來回約1.5小時",
+   "ref": "https://geibikei.co.jp/",
+   "note": "旺季週末建議提早抵達",
+   "map": "https://maps.app.goo.gl/W3U3D4tuymHaQ5sT8"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day5",
+   "name": "弘前城／弘前公園",
+   "type": "景點",
+   "detail": "天守閣+護城河紅葉倒影，菊と紅葉まつり期間人潮多",
+   "ref": "https://www.hirosakipark.jp/",
+   "note": "不需預約"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day5",
+   "name": "弘前市蘋果公園",
+   "type": "景點",
+   "detail": "大片蘋果園區，散步賞景",
+   "ref": "https://www.hirosaki-kanko.or.jp/",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/XYVsMw3Vzpg8t2Ld6"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day5",
+   "name": "黑石觀光蘋果園採摘",
+   "type": "體驗",
+   "detail": "富士、津輕、王林等品種採摘體驗",
+   "ref": "—",
+   "note": "建議先電話確認採摘體驗時段"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day5",
+   "name": "黑石「こみせ通り」（可選）",
+   "type": "景點",
+   "detail": "江戶時代木造拱廊老街",
+   "ref": "—",
+   "note": "時間充裕再排入"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day5/6",
+   "name": "青森魚菜中心（自製海鮮丼）",
+   "type": "餐廳",
+   "detail": "「買る・盛る・食べる」自助海鮮丼",
+   "ref": "https://nokkedon.jp/",
+   "note": "部分攤位傍晚提早收攤"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day6",
+   "name": "青森県觀光物產館ASPAM",
+   "type": "景點",
+   "detail": "三角形地標建築，展望台",
+   "ref": "https://www.aspm.jp/",
+   "note": "不需預約"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day6",
+   "name": "青い森わんど",
+   "type": "景點",
+   "detail": "青森港邊親水公園",
+   "ref": "—",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/jnGZepxQrRtwNx7r9"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day6",
+   "name": "A-FACTORY",
+   "type": "景點／購物",
+   "detail": "蘋果氣泡酒工房+市集",
+   "ref": "https://www.a-factory.co.jp/",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/MBXJ6d63Qn1bHNQj9"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day6",
+   "name": "睡魔之家 WA・RASSE（可選）",
+   "type": "景點",
+   "detail": "室內展示睡魔祭花車，無熊患風險備案",
+   "ref": "https://www.nebuta.jp/warasse/",
+   "note": "不需預約",
+   "map": "https://maps.app.goo.gl/VfGMxPDr6RU2Coe48"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day7",
+   "name": "八甲田纜車（八甲田ロープウェー）",
+   "type": "景點",
+   "detail": "山頂公園駅賞紅葉，僅搭纜車不建議走山道",
+   "ref": "https://www.hakkoda-ropeway.jp/",
+   "note": "紅葉季建議08:00前抵達避開排隊",
+   "map": "https://maps.app.goo.gl/aa4xpsREm2PGM2Su7"
+  },
+  {
+   "county": "青森縣",
+   "day": "Day7",
+   "name": "奧入瀨溪流精華段",
+   "type": "景點",
+   "detail": "石ヶ戸の瀬、銚子大滝、阿修羅之流、雲井の滝",
+   "ref": "官方資訊：https://www.eco-oirase.com/",
+   "note": "2026年マイカー規制已提前至9/7–13，10月不受影響",
+   "map": "https://maps.app.goo.gl/XNnfbQ8AphZ5Pvvc6"
+  }
+ ],
+ "spotKeys": [
+  "county",
+  "day",
+  "name",
+  "type",
+  "detail",
+  "ref",
+  "note"
+ ],
+ "hotels": [
+  {
+   "day": "Day1　10/20",
+   "place": "仙台市區",
+   "hotel": "奥州秋保温泉 蘭亭",
+   "status": "已訂",
+   "urgency": "中",
+   "note": "建議選車站或市區交通方便處，確認附設停車場",
+   "jpy": "¥22,590",
+   "hkd": "$1,295"
+  },
+  {
+   "day": "Day2　10/21",
+   "place": "藏王溫泉",
+   "hotel": "蔵王四季のホテル",
+   "status": "已訂",
+   "urgency": "已完成／請盡快下訂確認",
+   "note": "本次行程唯一秘湯體驗夜，取代原本的銀山溫泉",
+   "jpy": "¥94,500",
+   "hkd": "$4,725"
+  },
+  {
+   "day": "Day3　10/22",
+   "place": "田澤湖/角館周邊",
+   "hotel": "西木温泉ふれあいプラザクリオン",
+   "status": "已訂",
+   "urgency": "中",
+   "note": "盡量靠近田澤湖畔，方便隔天前往乳頭溫泉鄉",
+   "jpy": "¥17,650",
+   "hkd": "$883"
+  },
+  {
+   "day": "Day4　10/23",
+   "place": "弘前市區",
+   "hotel": "Guest House Chara",
+   "status": "已訂",
+   "urgency": "中",
+   "note": "—",
+   "jpy": "¥24,900",
+   "hkd": "$1,245"
+  },
+  {
+   "day": "Day5　10/24",
+   "place": "青森市（第1晚）",
+   "hotel": "最多可容納8人團體旅程- Kamiya",
+   "status": "已訂",
+   "urgency": "中",
+   "note": "建議與Day6同一間飯店連住，減少搬行李",
+   "hkd": "$2,922"
+  },
+  {
+   "day": "Day6　10/25",
+   "place": "青森市（第2晚）",
+   "hotel": "最多可容納8人團體旅程- Kamiya",
+   "status": "已訂",
+   "urgency": "中",
+   "note": "連住第2晚"
+  },
+  {
+   "day": "Day7　10/26",
+   "place": "十和田湖/奧入瀨",
+   "hotel": "Jalan Yuze Hotel Resort",
+   "status": "已訂",
+   "urgency": "高（紅葉季熱門）",
+   "note": "紅葉季周邊住宿早早滿房，建議優先處理",
+   "jpy": "¥42,200",
+   "hkd": "$2,210"
+  },
+  {
+   "day": "Day8　10/27",
+   "place": "盛岡市區",
+   "hotel": "在日本IwateMorioka的出租單位",
+   "status": "已訂",
+   "urgency": "中",
+   "note": "—",
+   "hkd": "$1,147"
+  },
+  {
+   "day": "Day9　10/28",
+   "place": "平泉/一關",
+   "hotel": "厳美渓温泉 いつくし園",
+   "status": "已訂",
+   "urgency": "中",
+   "note": "—",
+   "jpy": "¥38,610",
+   "hkd": "$1,931"
+  },
+  {
+   "day": "Day10　10/29",
+   "place": "松島",
+   "hotel": "松島温泉 ホテル 絶景の館",
+   "status": "已訂",
+   "urgency": "中高",
+   "note": "建議選能看海景的旅館",
+   "jpy": "¥27,075",
+   "hkd": "$1,354"
+  },
+  {
+   "day": "Day11　10/30",
+   "place": "仙台市區",
+   "hotel": "Kunimaru先生的公寓",
+   "status": "已訂",
+   "urgency": "中",
+   "note": "建議選在機場周邊或市區交通方便處，方便隔天從容還車",
+   "hkd": "$957"
+  }
+ ],
+ "hotelKeys": [
+  "day",
+  "place",
+  "hotel",
+  "status",
+  "urgency",
+  "note",
+  "jpy",
+  "hkd"
+ ],
+ "alerts": [
+  {
+   "category": "交通管制",
+   "place": "奧入瀨溪流",
+   "info": "十和田奧入瀨觀光機構2026/3/26正式公告：2026年度マイカー交通規制提前至9月7日–13日（過去慣例為10月下旬），10/26行經時不受影響",
+   "action": "出發前1個月致電十和田奧入瀨觀光機構（0176-24-3006）做最後確認"
+  },
+  {
+   "category": "交通管制",
+   "place": "八幡平アスピーテライン",
+   "info": "10月中旬起夜間17:00–08:30封路；歷年全面冬季封路約落在11月4–5日傍晚（2026年正式公告尚未查到）",
+   "action": "10/27務必17:00前通過山頂路段；出發前1–2週致電八幡平市觀光協會（0195-78-3500）確認"
+  },
+  {
+   "category": "交通管制",
+   "place": "銀山溫泉",
+   "info": "冬季（1–3月）有マイカー規制與入場限制的先例，本次行程已完全取消該站，不受影響",
+   "action": "已從行程移除，無需理會"
+  },
+  {
+   "category": "熊出沒風險",
+   "place": "八甲田山區",
+   "info": "2026年6月該區曾發生兩起熊傷人事件（其中一起死亡）",
+   "action": "僅搭乘纜車，不走山頂自然步道，不脫隊進入林道"
+  },
+  {
+   "category": "熊出沒風險",
+   "place": "十和田湖畔／奧入瀨遊步道",
+   "info": "2026年8月曾有外國遊客在遊步道被熊咬傷",
+   "action": "僅走靠近停車場/遊客中心的平緩鋪面步道，避開清晨/黃昏時段，不深入健行"
+  },
+  {
+   "category": "熊出沒風險",
+   "place": "抱返り渓谷／蔦温泉",
+   "info": "森林深處步道，人煙稀少，熊出沒紀錄多",
+   "action": "已從行程完全移除"
+  },
+  {
+   "category": "訂房緊急度",
+   "place": "藏王溫泉一泊二食",
+   "info": "已確認尚有空房",
+   "action": "請盡快完成正式訂房付款，保留確認信"
+  },
+  {
+   "category": "訂房緊急度",
+   "place": "乳頭溫泉鄉（7間旅館）",
+   "info": "10/23、10/24全滿，僅休暇村10/24尚有空房",
+   "action": "已改為鶴の湯日歸溫泉，不留宿，無需再處理住宿"
+  },
+  {
+   "category": "訂房緊急度",
+   "place": "十和田湖/奧入瀨溫泉旅館",
+   "info": "紅葉季為當地住宿最熱門時段",
+   "action": "建議本週內優先處理這一晚的訂房"
+  },
+  {
+   "category": "訂房緊急度",
+   "place": "盛岡「大同苑」前澤牛",
+   "info": "供應量有限的人氣燒肉店",
+   "action": "建議提前電話或網路預約座位"
+  },
+  {
+   "category": "訂房緊急度",
+   "place": "東家本店椀子蕎麥麵",
+   "info": "市區人氣店，車位少",
+   "action": "建議提前預約用餐時間，或改搭計程車前往"
+  }
+ ],
+ "snow": [
+  {
+   "date": "10/20",
+   "route": "仙台機場 → 仙台市",
+   "snowRisk": "🟢 1/5",
+   "iceRisk": "🟢 1/5",
+   "caution": "很低",
+   "tireValue": "★"
+  },
+  {
+   "date": "10/21",
+   "route": "仙台 → 磐々峽 → 藏王",
+   "snowRisk": "🟡 3/5",
+   "iceRisk": "🟠 4/5",
+   "caution": "高",
+   "tireValue": "★★★★"
+  },
+  {
+   "date": "10/22",
+   "route": "藏王 → 山形 → 角館 → 田澤湖",
+   "snowRisk": "🟡 2/5",
+   "iceRisk": "🟡 2/5",
+   "caution": "中低",
+   "tireValue": "★★"
+  },
+  {
+   "date": "10/23",
+   "route": "田澤湖 → 乳頭溫泉鄉 → 弘前",
+   "snowRisk": "🟡 2/5",
+   "iceRisk": "🟠 3/5",
+   "caution": "中",
+   "tireValue": "★★★"
+  },
+  {
+   "date": "10/24",
+   "route": "弘前 → 黑石 → 青森",
+   "snowRisk": "🟢 1/5",
+   "iceRisk": "🟢 1–2/5",
+   "caution": "低",
+   "tireValue": "★"
+  },
+  {
+   "date": "10/25",
+   "route": "青森市內",
+   "snowRisk": "🟢 1/5",
+   "iceRisk": "🟢 1/5",
+   "caution": "很低",
+   "tireValue": "★"
+  },
+  {
+   "date": "10/26",
+   "route": "青森 → 八甲田 → 奧入瀨",
+   "snowRisk": "🟠 4/5",
+   "iceRisk": "🔴 4–5/5",
+   "caution": "非常高",
+   "tireValue": "★★★★★"
+  },
+  {
+   "date": "10/27",
+   "route": "奧入瀨 → 八幡平 → 盛岡",
+   "snowRisk": "🔴 4–5/5",
+   "iceRisk": "🔴 5/5",
+   "caution": "全程最高",
+   "tireValue": "★★★★★"
+  },
+  {
+   "date": "10/28",
+   "route": "盛岡 → 平泉 → 嚴美溪 → 猊鼻溪 → 一關",
+   "snowRisk": "🟢 1–2/5",
+   "iceRisk": "🟡 2/5",
+   "caution": "低～中",
+   "tireValue": "★★"
+  },
+  {
+   "date": "10/29",
+   "route": "一關 → 松島",
+   "snowRisk": "🟢 1/5",
+   "iceRisk": "🟢 1/5",
+   "caution": "很低",
+   "tireValue": "★"
+  },
+  {
+   "date": "10/30",
+   "route": "松島 → 鹽釜 → 仙台",
+   "snowRisk": "🟢 1/5",
+   "iceRisk": "🟢 1/5",
+   "caution": "很低",
+   "tireValue": "★"
+  },
+  {
+   "date": "10/31",
+   "route": "仙台 → 仙台機場",
+   "snowRisk": "🟢 1/5",
+   "iceRisk": "🟢 1/5",
+   "caution": "很低",
+   "tireValue": "★"
+  }
+ ],
+ "sos": {
+  "title": "緊急聯絡與事故處理",
+  "hotlines": [
+   {
+    "name": "香港入境處 24 小時協助熱線",
+    "phone": "+852 1868",
+    "note": "（亦支援 WhatsApp  或微信求助）"
+   },
+   {
+    "name": "日本 IR&C 醫療支援中心",
+    "phone": "0120-119-075",
+    "note": "（24小時中英日語，專責突發疾病與受傷救助）"
+   },
+   {
+    "name": "JNTO 日本遊客熱線",
+    "phone": "050-3816-2787",
+    "note": "（24小時中文服務，可協助災害與緊急情況對策）"
+   }
+  ],
+  "steps": [
+   "在日本開車不論是撞到車、撞到護欄、或是撞到野生動物，只要車輛有任何損傷，第一步就是「報警（撥打 110）」，否則保險一律失效 [1.2, 1.4.6]。",
+   "確保安全與立牌：將車停在安全處，按下雙閃燈。在車後方適當距離放置三角御用警示牌（通常在後車廂），人移至護欄外等安全地帶。",
+   "撥打 110：用手機直接撥打 110（不需加國碼，有外國 SIM 卡或漫遊即可撥打）。",
+   "告知需要中文服務：接通後，警員會用日文問你發生什麼事。請直接說：「中文，請（Chinese, please / チュウゴクゴ・オネガイシマス）」。日本警方通常會立刻啟動三方通話，幫你連線到中文翻譯官。",
+   "聯絡 NISSAN 租車公司：警察處理完並做完紀錄後，接著撥打日產租車的客服電話（交車時車內手冊會提供），告知發生事故。"
+  ],
+  "phrases": [
+   {
+    "zh": "「發生車禍了。」",
+    "ja": "事故です。(Jiko desu.)",
+    "en": "There was an accident."
+   },
+   {
+    "zh": "「我撞到了動物（鹿）。」",
+    "ja": "動物（鹿）をはねました。(Dobutsu (Shika) wo hanemashita.)",
+    "en": "I hit an animal (a deer)."
+   },
+   {
+    "zh": "「我的位置在...」",
+    "ja": "場所は 〇〇 です。(Basho wa 〇〇 desu.)",
+    "tip": "山路若不知道地址，可以尋找路邊電線桿、防波堤或路標上的數字代號，或者直接報上導航/手機地圖上的 GPS 座標。"
+   }
+  ]
+ },
+ "charging": [
+  {
+   "title": "1. 充電頭與轉接器",
+   "items": [
+    {
+     "name": "Anker 140W 主力充電器",
+     "qty": "1 個",
+     "spec": "3 × USB-C + 1 × USB-A",
+     "use": "酒店主力快充（3部手機、行動電源、相機座）"
+    },
+    {
+     "name": "UGREEN 備用充電器",
+     "qty": "1 個",
+     "spec": "1 × USB-C + 1 × USB-A (英規)",
+     "use": "酒店次要充電（Apple Watch、AirPods）"
+    },
+    {
+     "name": "英規轉日規轉接頭",
+     "qty": "1 個",
+     "spec": "英規三腳 轉 日規雙扁腳",
+     "use": "供 UGREEN 充電器在日本牆壁插座使用"
+    },
+    {
+     "name": "外置充電池 (行動電源)",
+     "qty": "2 個",
+     "spec": "USB-C / USB-A",
+     "use": "日間隨身備用（必須隨身登機，禁止託運）"
+    },
+    {
+     "name": "車用點煙器充電頭",
+     "qty": "1 個",
+     "spec": "至少 1 × USB-C + 1 × USB-A",
+     "use": "自駕必備：插汽車點煙器，給 GoPro 及導航供電"
+    }
+   ]
+  },
+  {
+   "title": "2. 線材與座充",
+   "items": [
+    {
+     "name": "GoPro 車載專用線",
+     "qty": "1 條",
+     "spec": "USB-C to USB-C (1.5m – 2m長線)",
+     "use": "固定留在車上給 GoPro 作車載鏡頭供電"
+    },
+    {
+     "name": "Type-C 常規充電線",
+     "qty": "3 條",
+     "spec": "USB-C to USB-C (1m)",
+     "use": "供 3 部 Type-C 手機、行動電源及相機座使用"
+    },
+    {
+     "name": "USB-A 備用線",
+     "qty": "1 條",
+     "spec": "USB-A to USB-C (1m)",
+     "use": "配合舊款車充或 UGREEN USB-A 埠備用"
+    },
+    {
+     "name": "Lightning 充電線",
+     "qty": "2 條",
+     "spec": "C-to-Lightning 或 A-to-Lightning",
+     "use": "供 iPhone XR 及 AirPods Pro（若為舊版）使用"
+    },
+    {
+     "name": "Apple Watch 充電線",
+     "qty": "1 條",
+     "spec": "專用磁吸充電線",
+     "use": "Apple Watch 專用"
+    },
+    {
+     "name": "相機電池座充",
+     "qty": "1 個",
+     "spec": "Type-C 輸入",
+     "use": "相機電池專用座充"
+    }
+   ]
+  }
+ ],
+ "geo": [
+  {
+   "name": "仙台機場",
+   "lat": 38.1397,
+   "lng": 140.917,
+   "kind": "airport"
+  },
+  {
+   "name": "奥州秋保温泉 蘭亭",
+   "lat": 38.2268,
+   "lng": 140.707,
+   "kind": "hotel",
+   "day": 1,
+   "map": "https://maps.app.goo.gl/xhNxo14ifyhdu8dM6"
+  },
+  {
+   "name": "青葉城址（仙台城跡）",
+   "lat": 38.2534,
+   "lng": 140.8632,
+   "kind": "spot",
+   "day": 1
+  },
+  {
+   "name": "仙台市區",
+   "lat": 38.2688,
+   "lng": 140.8686,
+   "kind": "spot"
+  },
+  {
+   "name": "磊々峡 （秋保溫泉旁溪谷）",
+   "lat": 38.2222,
+   "lng": 140.6997,
+   "kind": "spot",
+   "day": 2
+  },
+  {
+   "name": "藏王エコーライン兜風（御釜展望）",
+   "lat": 38.1358,
+   "lng": 140.4836,
+   "kind": "spot",
+   "day": 2
+  },
+  {
+   "name": "藏王空中纜車（藏王ロープウェイ）",
+   "lat": 38.1422,
+   "lng": 140.4425,
+   "kind": "spot",
+   "day": 2
+  },
+  {
+   "name": "蔵王四季のホテル",
+   "lat": 38.1444,
+   "lng": 140.4472,
+   "kind": "hotel",
+   "day": 2
+  },
+  {
+   "name": "文翔館",
+   "lat": 38.2489,
+   "lng": 140.335,
+   "kind": "spot",
+   "day": 3
+  },
+  {
+   "name": "寶珠山立石寺（山寺）",
+   "lat": 38.3214,
+   "lng": 140.4339,
+   "kind": "spot",
+   "day": 3
+  },
+  {
+   "name": "角館武家屋敷通り",
+   "lat": 39.5986,
+   "lng": 140.5625,
+   "kind": "spot",
+   "day": 3
+  },
+  {
+   "name": "西木温泉ふれあいプラザクリオン",
+   "lat": 39.6036,
+   "lng": 140.5614,
+   "kind": "hotel",
+   "day": 3
+  },
+  {
+   "name": "田澤湖",
+   "lat": 39.7217,
+   "lng": 140.6833,
+   "kind": "spot",
+   "day": 4
+  },
+  {
+   "name": "鶴の湯溫泉 日歸入浴",
+   "lat": 39.7994,
+   "lng": 140.7925,
+   "kind": "spot",
+   "day": 4
+  },
+  {
+   "name": "Guest House Chara",
+   "lat": 40.6033,
+   "lng": 140.4606,
+   "kind": "hotel",
+   "day": 4
+  },
+  {
+   "name": "弘前市蘋果公園",
+   "lat": 40.6039,
+   "lng": 140.4561,
+   "kind": "spot",
+   "day": 5
+  },
+  {
+   "name": "弘前城",
+   "lat": 40.6053,
+   "lng": 140.4603,
+   "kind": "spot",
+   "day": 5
+  },
+  {
+   "name": "最多可容納8人團體旅程- Kamiya",
+   "lat": 40.8244,
+   "lng": 140.74,
+   "kind": "hotel",
+   "day": 5
+  },
+  {
+   "name": "青森県觀光物產館 ASPAM",
+   "lat": 40.8244,
+   "lng": 140.7594,
+   "kind": "spot",
+   "day": 6
+  },
+  {
+   "name": "A-FACTORY",
+   "lat": 40.8269,
+   "lng": 140.7578,
+   "kind": "spot",
+   "day": 6
+  },
+  {
+   "name": "青森魚菜中心「買る・盛る・食べる」自助海鮮丼",
+   "lat": 40.8239,
+   "lng": 140.7503,
+   "kind": "spot",
+   "day": 6
+  },
+  {
+   "name": "八甲田纜車（八甲田ロープウェー）",
+   "lat": 40.4836,
+   "lng": 140.7592,
+   "kind": "spot",
+   "day": 7
+  },
+  {
+   "name": "奧入瀨溪流精華段",
+   "lat": 40.4722,
+   "lng": 140.98,
+   "kind": "spot",
+   "day": 7
+  },
+  {
+   "name": "Jalan Yuze Hotel Resort",
+   "lat": 39.4333,
+   "lng": 140.5167,
+   "kind": "hotel",
+   "day": 7
+  },
+  {
+   "name": "八幡平アスピーテライン兜風",
+   "lat": 39.9586,
+   "lng": 140.8528,
+   "kind": "spot",
+   "day": 8
+  },
+  {
+   "name": "盛岡城跡公園",
+   "lat": 39.7014,
+   "lng": 141.1369,
+   "kind": "spot",
+   "day": 8
+  },
+  {
+   "name": "在日本IwateMorioka的出租單位",
+   "lat": 39.7036,
+   "lng": 141.1525,
+   "kind": "hotel",
+   "day": 8
+  },
+  {
+   "name": "中尊寺金色堂",
+   "lat": 39.0008,
+   "lng": 141.1081,
+   "kind": "spot",
+   "day": 9
+  },
+  {
+   "name": "毛越寺",
+   "lat": 38.9908,
+   "lng": 141.1069,
+   "kind": "spot",
+   "day": 9
+  },
+  {
+   "name": "猊鼻溪乘船",
+   "lat": 38.9236,
+   "lng": 141.0686,
+   "kind": "spot",
+   "day": 9
+  },
+  {
+   "name": "厳美渓温泉 いつくし園",
+   "lat": 38.9286,
+   "lng": 141.1067,
+   "kind": "hotel",
+   "day": 9
+  },
+  {
+   "name": "瑞巖寺／五大堂",
+   "lat": 38.37,
+   "lng": 141.0611,
+   "kind": "spot",
+   "day": 10
+  },
+  {
+   "name": "松島遊船",
+   "lat": 38.3717,
+   "lng": 141.0586,
+   "kind": "spot",
+   "day": 10
+  },
+  {
+   "name": "円通院 紅葉夜楓點燈",
+   "lat": 38.3736,
+   "lng": 141.0581,
+   "kind": "spot",
+   "day": 10
+  },
+  {
+   "name": "松島温泉 ホテル 絶景の館",
+   "lat": 38.3706,
+   "lng": 141.0561,
+   "kind": "hotel",
+   "day": 10
+  },
+  {
+   "name": "鹽釜魚市場",
+   "lat": 38.3181,
+   "lng": 140.9653,
+   "kind": "spot",
+   "day": 11
+  },
+  {
+   "name": "仙台朝市",
+   "lat": 38.2594,
+   "lng": 140.8822,
+   "kind": "spot",
+   "day": 12
+  },
+  {
+   "name": "仙台泉PREMIUM OUTLETS",
+   "lat": 38.2319,
+   "lng": 140.8681,
+   "kind": "spot",
+   "day": 11
+  },
+  {
+   "name": "Kunimaru先生的公寓",
+   "lat": 38.265,
+   "lng": 140.875,
+   "kind": "hotel",
+   "day": 11
+  }
+ ],
+ "route": [
+  "仙台機場",
+  "奥州秋保温泉 蘭亭",
+  "蔵王四季のホテル",
+  "西木温泉ふれあいプラザクリオン",
+  "Guest House Chara",
+  "最多可容納8人團體旅程- Kamiya",
+  "Jalan Yuze Hotel Resort",
+  "在日本IwateMorioka的出租單位",
+  "厳美渓温泉 いつくし園",
+  "松島温泉 ホテル 絶景の館",
+  "Kunimaru先生的公寓",
+  "仙台機場"
+ ]
+}
