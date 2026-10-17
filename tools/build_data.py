@@ -45,6 +45,33 @@ def clean(value: str) -> str:
     return value
 
 
+def tidy_payment(value: str) -> str:
+    """Strip stray quote artifacts left by the CSV export in payment cells."""
+    lines = [ln.strip().strip('"').strip() for ln in value.splitlines()]
+    lines = [ln for ln in lines if ln]
+    return "\n".join(lines)
+
+
+MERIDIEM = {"下午": 12, "晚上": 12, "傍晚": 12}
+
+
+def tidy_time(value: str) -> str:
+    """Normalize time cells like '下午 13:30:00' -> '13:30'."""
+    v = value.strip()
+    if not v:
+        return v
+    m = re.match(r"^(上午|下午|早上|晚上|凌晨|傍晚)\s*(\d{1,2})(:\d{2})(:\d{2})?$", v)
+    if m:
+        era, hh, mm = m.group(1), int(m.group(2)), m.group(3)
+        if era in MERIDIEM and hh < 12:
+            hh += MERIDIEM[era]
+        return f"{hh:02d}{mm}"
+    m = re.match(r"^(\d{1,2}:\d{2}):\d{2}$", v)
+    if m:
+        return m.group(1)
+    return v
+
+
 # ---------------- overview ----------------
 
 def parse_overview(links: dict):
@@ -124,14 +151,14 @@ def parse_day(day_no: int, links: dict) -> dict:
         if not any([c0, c1, c2, c3, c4, c5, c6, c7]):
             continue
         item = {
-            "time": c0,
+            "time": tidy_time(c0),
             "type": c1,
             "name": c2,
             "detail": c3,
             "parking": c4,
             "ref": c5,
             "note": c6,
-            "payment": c7,
+            "payment": tidy_payment(c7),
         }
         row_links = sheet_links(links, sheet, row_no)
         for col, key in (("C", "map"), ("D", "detailMap"), ("E", "parkingMap"), ("F", "refMap"), ("G", "noteMap")):
@@ -158,6 +185,7 @@ def parse_cost() -> dict:
     hotels, flights, rental = [], [], []
     tolls, toll_notes = [], []
     in_toll = False
+    totals = {}
     for row in rows:
         c0 = cell(row, 0)
         if c0 == "過路費總表":
@@ -186,6 +214,25 @@ def parse_cost() -> dict:
                 rental.append({"item": r_name, "jpy": r_jpy, "hkd": r_hkd})
         elif c0 == "Total":
             totals = {"hotelHKD": cell(row, 3), "flightHKD": cell(row, 5), "rentalHKD": cell(row, 9)}
+
+    def hkd_num(s: str) -> float:
+        m = re.sub(r"[^\d.]", "", s or "")
+        return float(m) if m else 0.0
+
+    sheet_total = totals.get("rentalHKD", "")
+    detail_total = sum(hkd_num(r["hkd"]) for r in rental)
+    # The sheet's rental Total uses =SUM(J2:J7), which misses ETC tolls and the
+    # newly added travel insurance; trust the line-item sum when they disagree.
+    rental_total = sheet_total
+    rental_total_note = ""
+    if detail_total and abs(detail_total - hkd_num(sheet_total)) >= 1:
+        rental_total = f"${detail_total:,.0f}"
+        rental_total_note = (
+            f"租車合計以明細加總為準：試算表 Total 公式（SUM J2:J7）未涵蓋 ETC 過路費與旅遊保險，"
+            f"故試算表顯示 {sheet_total}、明細加總為 {rental_total}。"
+        )
+    totals["rentalHKDDetail"] = rental_total
+    totals["rentalNote"] = rental_total_note
     return {
         "hotels": hotels,
         "flights": flights,

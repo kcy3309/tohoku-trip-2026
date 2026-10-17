@@ -541,7 +541,7 @@
      "parking": "",
      "ref": "青森縣, 弘前, 2-8-2 Aoyama, 日本\n+8190-6628-1024",
      "note": "Airbnb",
-     "payment": "￥24900  (Citibank Debit Ying)\n\"\n2026年10月18日前（不含當日）可免費取消\"",
+     "payment": "￥24900  (Citibank Debit Ying)\n2026年10月18日前（不含當日）可免費取消\n已過數",
      "map": "https://maps.app.goo.gl/o3143yHqm1QyYDxs8"
     }
    ]
@@ -628,7 +628,7 @@
      "parking": "",
      "ref": "",
      "note": "Airbnb",
-     "payment": "Yu DSB (HK$2922.23)\n\n系統將於10月11日向你收取$2922.23 HKD。\n我們會於10月8日向你發送提醒。",
+     "payment": "Yu DSB (HK$2922.23)\n系統將於10月11日向你收取$2922.23 HKD。\n我們會於10月8日向你發送提醒。\n已過數",
      "detailMap": "https://maps.app.goo.gl/Gns9HWhSeFroadnx5"
     }
    ]
@@ -731,13 +731,13 @@
     {
      "time": "",
      "type": "餐廳",
-     "name": "炉端とおでん 呼炉凪来 青森駅前店",
-     "detail": "未訂位",
+     "name": "回転鮨処あすか 東大野店",
+     "detail": "",
      "parking": "",
      "ref": "",
      "note": "",
      "payment": "",
-     "map": "https://maps.app.goo.gl/SYGHxcNvVS7v324S8"
+     "map": "https://maps.app.goo.gl/GNqTpGo3vBodDb4w5"
     },
     {
      "time": "晚上",
@@ -747,7 +747,7 @@
      "parking": "",
      "ref": "",
      "note": "Airbnb",
-     "payment": "Yu DSB (HK$2922.23)\n\n系統將於10月11日向你收取$2922.23 HKD。\n我們會於10月8日向你發送提醒。"
+     "payment": "Yu DSB (HK$2922.23)\n系統將於10月11日向你收取$2922.23 HKD。\n我們會於10月8日向你發送提醒。\n已過數"
     }
    ]
   },
@@ -961,8 +961,8 @@
     },
     {
      "time": "18:00",
-     "type": "self dinner",
-     "name": "",
+     "type": "晚餐",
+     "name": "在民宿煮食",
      "detail": "Aeon Town 盛岡駅前",
      "parking": "Aeon Mall Morioka イオンモール盛岡",
      "ref": "永旺夢樂城盛岡南",
@@ -980,7 +980,7 @@
      "parking": "訂房時確認附設停車場",
      "ref": "https://www.airbnb.com.hk/rooms/1430748842975903584?unique_share_id=841f3e38-6c84-4d19-852d-3ef066c53dd4&check_in=2026-10-27&check_out=2026-10-28&adults=3&s=67&source_impression_id=p3_1790484118_P3ki3zQislEG2DNU",
      "note": "Airbnb",
-     "payment": "Yu DSB (HK$1146.99)\n\n在10⽉22⽇下午3:00前可免費取消訂單。在此限期後，訂單將不設退款。"
+     "payment": "Yu DSB (HK$1146.99)\n在10⽉22⽇下午3:00前可免費取消訂單。在此限期後，訂單將不設退款。\n己過數"
     }
    ]
   },
@@ -1173,27 +1173,17 @@
      "payment": ""
     },
     {
-     "time": "11:30",
+     "time": "",
      "type": "交通",
-     "name": "鹽釜 → AEON影城 新利府",
+     "name": "鹽釜魚市場\n→\n一番町／クリスロード拱廊商店街",
      "detail": "開車約30分鐘",
-     "parking": "—",
-     "ref": "—",
-     "note": "—",
-     "payment": ""
-    },
-    {
-     "time": "12:30",
-     "type": "餐廳",
-     "name": "AEON影城 新利府\n午餐",
-     "detail": "",
      "parking": "",
-     "ref": "—",
-     "note": "—",
+     "ref": "",
+     "note": "",
      "payment": ""
     },
     {
-     "time": "13:30",
+     "time": "11:30",
      "type": "購物",
      "name": "一番町／クリスロード拱廊商店街",
      "detail": "仙台最大商店街，全天候拱廊不怕下雨，內有唐吉訶德（驚安の殿堂）、多間藥妝店（松本清、Welcia等）、100円店、伴手禮店，補貨最方便的一站",
@@ -1203,7 +1193,18 @@
      "payment": ""
     },
     {
-     "time": "15:00",
+     "time": "13:30",
+     "type": "午餐",
+     "name": "仔虎燒肉",
+     "detail": "己預約",
+     "parking": "",
+     "ref": "—",
+     "note": "—",
+     "payment": "",
+     "map": "https://maps.app.goo.gl/qE99fbUcP9zQXXvR9"
+    },
+    {
+     "time": "",
      "type": "購物",
      "name": "仙台PARCO／エスパル仙台",
      "detail": "車站直結的百貨商場，Uniqlo、GU、無印良品等品牌齊全，エスパル內也有超市可買零食伴手禮",
@@ -1213,7 +1214,7 @@
      "payment": ""
     },
     {
-     "time": "16:00",
+     "time": "",
      "type": "購物",
      "name": "超市補貨（藤崎百貨地下超市／成城石井等）",
      "detail": "買零食、伴手禮、當地限定商品，車站周邊超市選擇多",
@@ -1223,16 +1224,15 @@
      "payment": ""
     },
     {
-     "time": "19:30",
-     "type": "餐廳",
-     "name": "仙台市區晚餐",
-     "detail": "仔虎燒肉",
-     "parking": "牛刺しと焼肉 仔虎 クリスロード店",
+     "time": "18:00",
+     "type": "晚餐",
+     "name": "在民宿煮食",
+     "detail": "永旺夢樂城 仙台上杉 購買食材",
+     "parking": "",
      "ref": "—",
      "note": "—",
      "payment": "",
-     "detailMap": "https://maps.app.goo.gl/qE99fbUcP9zQXXvR9",
-     "parkingMap": "https://maps.app.goo.gl/MQKyekEnhpqHXD9o6"
+     "detailMap": "https://maps.app.goo.gl/kU2XvUr5U83oPnZg8"
     },
     {
      "time": "晚上",
@@ -1242,7 +1242,7 @@
      "parking": "訂房時確認附設停車場",
      "ref": "Airbnb",
      "note": "—",
-     "payment": "Yu DSB (HK$957)"
+     "payment": "Yu DSB (HK$957)\n已過數"
     }
    ]
   },
@@ -1426,12 +1426,19 @@
     "item": "ETC 過路費",
     "jpy": "$13,000",
     "hkd": "$650"
+   },
+   {
+    "item": "旅遊保險",
+    "jpy": "",
+    "hkd": "$534"
    }
   ],
   "totals": {
    "hotelHKD": "$18,668",
    "flightHKD": "$10,889",
-   "rentalHKD": "$10,829"
+   "rentalHKD": "$10,829",
+   "rentalHKDDetail": "$12,014",
+   "rentalNote": "租車合計以明細加總為準：試算表 Total 公式（SUM J2:J7）未涵蓋 ETC 過路費與旅遊保險，故試算表顯示 $10,829、明細加總為 $12,014。"
   },
   "tolls": [
    {

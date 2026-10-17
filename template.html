@@ -158,6 +158,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--ginkgo) 8%,transparent)}
 .it-extra{margin:5px 0 0;font-size:.8rem;display:flex;gap:12px;flex-wrap:wrap;color:var(--ink2)}
 .it-extra a{word-break:break-all}
 .pill{display:inline-block;font-size:.72rem;background:var(--paper2);border-radius:8px;padding:1px 7px;color:var(--ink2)}
+.pill.paid{background:color-mix(in srgb,var(--moss) 18%,transparent);color:var(--moss);font-weight:700}
 .busbox{margin-top:10px;background:var(--paper2);border-radius:10px;padding:10px 12px;font-size:.82rem}
 .busbox table{font-size:.8rem;margin-top:6px}
 .busbox th,.busbox td{padding:3px 8px}
@@ -427,7 +428,7 @@ $("#heroChips").innerHTML = [
   `<span class="chip">✈️ <b>${esc(DATA.meta.flightLine.split("｜")[0])}</b></span>`,
   `<span class="chip">👥 ${esc(DATA.meta.travelers)}</span>`,
   `<span class="chip">🚗 ${esc(DATA.meta.dailyDrive)}</span>`,
-  `<span class="chip red">💰 住宿 <b>${esc(tot.hotelHKD)}</b> · 機票 <b>${esc(tot.flightHKD)}</b> · 租車 <b>${esc(tot.rentalHKD)}</b>（HKD）</span>`,
+  `<span class="chip red">💰 住宿 <b>${esc(tot.hotelHKD)}</b> · 機票 <b>${esc(tot.flightHKD)}</b> · 租車 <b>${esc(tot.rentalHKDDetail || tot.rentalHKD)}</b>（HKD）</span>`,
 ].join("");
 
 /* ---------- overview ---------- */
@@ -449,8 +450,8 @@ $("#ovTable").innerHTML = `
 $("#decisionList").innerHTML = DATA.decisions.map(d => `<li>${nl2br(d)}</li>`).join("");
 
 /* ---------- days ---------- */
-const TYPE_ICON = {"交通":"🚗","景點":"🍁","餐廳":"🍽","住宿":"🏨","體驗":"♨️","購物":"🛍","休息":"☕","還車":"🔑","抵達":"✈️","下午茶":"🍰","備用":"🔄","JR Bus":"🚌","self dinner":"🍽","餐廳／購物":"🍽","景點／餐廳":"🍁","景點／購物":"🍁"};
-const itCls = (t) => t.includes("住宿") ? "hotel" : (t.includes("餐廳") || t.includes("dinner") || t.includes("下午茶")) ? "food" : (t.includes("交通") || t.includes("JR") || t.includes("還車") || t.includes("抵達")) ? "trans" : "";
+const TYPE_ICON = {"交通":"🚗","景點":"🍁","餐廳":"🍽","住宿":"🏨","體驗":"♨️","購物":"🛍","休息":"☕","還車":"🔑","抵達":"✈️","下午茶":"🍰","備用":"🔄","JR Bus":"🚌","self dinner":"🍽","晚餐":"🍽","午餐":"🍽","餐廳／購物":"🍽","景點／餐廳":"🍁","景點／購物":"🍁"};
+const itCls = (t) => t.includes("住宿") ? "hotel" : (t.includes("餐廳") || t.includes("dinner") || t.includes("下午茶") || t.includes("午餐") || t.includes("晚餐")) ? "food" : (t.includes("交通") || t.includes("JR") || t.includes("還車") || t.includes("抵達")) ? "trans" : "";
 const snowByDate = Object.fromEntries(DATA.snow.map(s => [s.date, s]));
 function riskTag(txt){
   const v = String(txt || "");
@@ -474,7 +475,7 @@ $("#dayList").innerHTML = DATA.days.map(d => {
         ${it.parking && it.parking !== "—" ? `<span>🅿️ ${rawMapLink(it.parkingMap, nl2br(it.parking))}</span>` : ""}
         ${it.ref && it.ref !== "—" ? `<span>🔗 ${isUrl(it.ref) ? urlCell(it.ref) : it.refMap ? rawMapLink(it.refMap, nl2br(it.ref)) : telCell(it.ref)}</span>` : ""}
         ${it.note && it.note !== "—" ? `<span>📝 ${rawMapLink(it.noteMap, nl2br(it.note))}</span>` : ""}
-        ${it.payment ? `<span class="pill">💳 ${esc(it.payment)}</span>` : ""}
+        ${it.payment ? `<span class="pill${/過數/.test(it.payment) ? " paid" : ""}">💳 ${/過數/.test(it.payment) ? "已付款 · " : ""}${nl2br(it.payment)}</span>` : ""}
       </div>` : ""}
     </div>`).join("");
   const bus = d.bus ? `
@@ -534,15 +535,15 @@ initMap();
 $("#costCards").innerHTML = `
   <div class="cost-card"><h3>🏨 住宿（11 晚）</h3><div class="big">${esc(tot.hotelHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · 含早晚餐方案差異</div></div>
   <div class="cost-card"><h3>✈️ 機票（3 人）</h3><div class="big">${esc(tot.flightHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · HKG ⇄ SDJ</div></div>
-  <div class="cost-card"><h3>🚗 租車相關</h3><div class="big">${esc(tot.rentalHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · 車資＋ETC＋保險＋雪胎＋油費</div></div>`;
-$("#costNote").innerHTML = DATA.cost.tollNotes.map(n => `· ${esc(n)}`).join("<br>");
+  <div class="cost-card"><h3>🚗 租車相關</h3><div class="big">${esc(tot.rentalHKDDetail || tot.rentalHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · 車資＋ETC＋保險＋旅遊保險＋雪胎＋油費</div></div>`;
+$("#costNote").innerHTML = DATA.cost.tollNotes.map(n => `· ${esc(n)}`).join("<br>") + (tot.rentalNote ? `<br>· ${esc(tot.rentalNote)}` : "");
 $("#hotelCostTable").innerHTML = `
 <thead><tr><th>Day</th><th>住宿</th><th>JPY</th><th>HKD</th></tr></thead>
 <tbody>${DATA.cost.hotels.map(h => `<tr><td class="num">${esc(h.day.replace("Day ", "D"))}</td><td>${esc(h.name)}</td><td class="num">${esc(h.jpy) || "—"}</td><td class="num money">${esc(h.hkd)}</td></tr>`).join("")}</tbody>`;
 $("#rentalTable").innerHTML = `
 <thead><tr><th>項目</th><th>JPY</th><th>HKD</th></tr></thead>
 <tbody>${DATA.cost.rental.map(r => `<tr><td>${esc(r.item)}</td><td class="num">${esc(r.jpy) || "—"}</td><td class="num money">${esc(r.hkd)}</td></tr>`).join("")}
-<tr style="font-weight:900"><td>合計</td><td></td><td class="num money">${esc(tot.rentalHKD)}</td></tr></tbody>`;
+<tr style="font-weight:900"><td>合計</td><td></td><td class="num money">${esc(tot.rentalHKDDetail || tot.rentalHKD)}</td></tr></tbody>`;
 $("#tollTable").innerHTML = `
 <thead><tr><th>Day</th><th>收費段落</th><th>金額</th></tr></thead>
 <tbody>${DATA.cost.tolls.map(t => `<tr><td class="num">${esc(t.day)}</td><td>${esc(t.segment)}</td><td class="num">${esc(t.amount)}</td></tr>`).join("")}</tbody>`;
