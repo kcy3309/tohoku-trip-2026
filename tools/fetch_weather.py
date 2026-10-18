@@ -53,6 +53,8 @@ def main() -> None:
             "day": day,
             "date": date,
             "area": area,
+            "lat": lat,
+            "lng": lon,
             "weather": WMO.get(d["weather_code"][i], f"code {d['weather_code'][i]}"),
             "tmax": d["temperature_2m_max"][i],
             "tmin": d["temperature_2m_min"][i],

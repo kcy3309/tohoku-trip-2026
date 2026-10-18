@@ -469,29 +469,76 @@ $("#ovTable").innerHTML = `
 $("#decisionList").innerHTML = DATA.decisions.map(d => `<li>${nl2br(d)}</li>`).join("");
 
 /* ---------- weather ---------- */
-const wxList = DATA.weather || [];
-const wxByDay = Object.fromEntries(wxList.map(w => [w.day, w]));
+let wxList = DATA.weather || [];
+let wxByDay = Object.fromEntries(wxList.map(w => [w.day, w]));
 const popCls = (p) => (p >= 60 ? "p-high" : p >= 30 ? "p-mid" : "p-low");
-(function renderWeather(){
-  if (!wxList.length) {
+const WX_WMO = {0:"☀️ 晴",1:"🌤 大致晴",2:"⛅ 多雲",3:"☁️ 陰",45:"🌫 霧",48:"🌫 凍霧",51:"🌦 毛毛雨",53:"🌦 毛毛雨",55:"🌧 毛毛雨",56:"🌧 凍毛毛雨",57:"🌧 凍毛毛雨",61:"🌧 雨",63:"🌧 雨",65:"🌧 大雨",66:"🌧 凍雨",67:"🌧 凍雨",71:"🌨 小雪",73:"🌨 雪",75:"❄️ 大雪",77:"❄️ 雪粒",80:"🌦 陣雨",81:"🌦 陣雨",82:"⛈ 強陣雨",85:"🌨 陣雪",86:"🌨 陣雪",95:"⛈ 雷雨",96:"⛈ 雷雨冰雹",99:"⛈ 雷雨冰雹"};
+function renderWeather(list, fetchedAtISO, live){
+  if (!list.length) {
     $("#wxNote").innerHTML = "尚無天氣資料。執行 <b>python tools/fetch_weather.py</b> 後重新建置即可取得 Open-Meteo 12 天預報。";
+    $("#wxGrid").innerHTML = "";
     return;
   }
-  const fetched = DATA.weatherFetchedAt ? new Date(DATA.weatherFetchedAt) : null;
+  const fetched = fetchedAtISO ? new Date(fetchedAtISO) : null;
   const fetchedStr = fetched ? fetched.toLocaleString("zh-TW", {timeZone:"Asia/Taipei", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit"}) : "—";
+  const mode = live ? " · <b>🌐 即時預報</b>（每次開啟網頁自動更新）" : " · 建置時快照（開啟網頁時若無法連網則維持此資料）";
   $("#wxNote").innerHTML =
-    `📡 資料來源 <b>Open-Meteo</b>（各日住宿地點座標） · 取得時間 <b>${esc(fetchedStr)}</b>（台北時間）<br>` +
-    `⚠️ 10/24 之後屬 7–14 天延伸預報、變動較大；出發前 2–3 天請再重新執行 <code>tools/fetch_weather.py</code> 更新。`;
-  $("#wxGrid").innerHTML = wxList.map(w => `
+    `📡 資料來源 <b>Open-Meteo</b>（各日住宿地點座標）${mode} · 取得時間 <b>${esc(fetchedStr)}</b>（台北時間）<br>` +
+    `⚠️ 10/24 之後屬 7–14 天延伸預報、變動較大；出發前請再確認最新預報。`;
+  $("#wxGrid").innerHTML = list.map(w => `
     <div class="wx">
-      <div class="wx-d">Day ${w.day}｜${esc(w.date.slice(5).replace("-", "/"))}</div>
-      <div class="wx-ico">${esc(w.weather.split(" ")[0])}</div>
-      <div class="wx-w">${esc(w.weather.replace(/^.\s*/, ""))}<br>${esc(w.area)}</div>
+      <div class="wx-d">Day ${w.day}｜${esc(String(w.date).slice(5).replace("-", "/"))}</div>
+      <div class="wx-ico">${esc(String(w.weather).split(" ")[0])}</div>
+      <div class="wx-w">${esc(String(w.weather).replace(/^.\s*/, ""))}<br>${esc(w.area)}</div>
       <div class="wx-t">${Math.round(w.tmin)}~${Math.round(w.tmax)}°C</div>
       <div class="wx-p ${popCls(w.pop)}">💧 雨 ${w.pop}%</div>
       <div class="wx-wind">💨 ${Math.round(w.wind)} km/h${w.snow > 0 ? ` · ❄️ ${w.snow}mm` : ""}</div>
     </div>`).join("");
-})();
+}
+function updateWxBadges(list){
+  list.forEach(w => {
+    const el = document.querySelector(`.wx-badge[data-day="${w.day}"]`);
+    if (el){
+      el.className = `tag wx-badge ${popCls(w.pop)}`;
+      el.textContent = `${String(w.weather).split(" ")[0]} ${Math.round(w.tmin)}~${Math.round(w.tmax)}°C · 雨${w.pop}%`;
+    }
+  });
+}
+renderWeather(wxList, DATA.weatherFetchedAt, false);
+async function refreshWeatherLive(){
+  const stops = (DATA.weather || []).filter(w => typeof w.lat === "number" && typeof w.lng === "number");
+  if (!stops.length) return;
+  const key = (w) => `${w.lat},${w.lng}`;
+  const uniq = [...new Map(stops.map(w => [key(w), w])).values()];
+  const url = "https://api.open-meteo.com/v1/forecast"
+    + `?latitude=${uniq.map(w => w.lat).join(",")}&longitude=${uniq.map(w => w.lng).join(",")}`
+    + "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,snowfall_sum,wind_speed_10m_max"
+    + `&timezone=Asia%2FTokyo&start_date=${stops[0].date}&end_date=${stops[stops.length - 1].date}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("HTTP " + res.status);
+  const body = await res.json();
+  const arr = Array.isArray(body) ? body : [body];
+  const byCoord = {};
+  uniq.forEach((w, i) => { if (arr[i] && arr[i].daily) byCoord[key(w)] = arr[i].daily; });
+  const updated = stops.map(w => {
+    const d = byCoord[key(w)];
+    const i = d && d.time ? d.time.indexOf(w.date) : -1;
+    if (i < 0) return w;
+    return Object.assign({}, w, {
+      weather: WX_WMO[d.weather_code[i]] || w.weather,
+      tmax: d.temperature_2m_max[i],
+      tmin: d.temperature_2m_min[i],
+      pop: d.precipitation_probability_max[i] != null ? d.precipitation_probability_max[i] : w.pop,
+      snow: d.snowfall_sum[i] != null ? d.snowfall_sum[i] : w.snow,
+      wind: d.wind_speed_10m_max[i] != null ? d.wind_speed_10m_max[i] : w.wind,
+    });
+  });
+  wxList = updated;
+  wxByDay = Object.fromEntries(updated.map(w => [w.day, w]));
+  renderWeather(updated, new Date().toISOString(), true);
+  updateWxBadges(updated);
+}
+refreshWeatherLive().catch(() => {});
 
 /* ---------- days ---------- */
 const TYPE_ICON = {"交通":"🚗","景點":"🍁","餐廳":"🍽","住宿":"🏨","體驗":"♨️","購物":"🛍","休息":"☕","還車":"🔑","抵達":"✈️","下午茶":"🍰","備用":"🔄","JR Bus":"🚌","self dinner":"🍽","晚餐":"🍽","午餐":"🍽","餐廳／購物":"🍽","景點／餐廳":"🍁","景點／購物":"🍁"};
@@ -537,7 +584,7 @@ $("#dayList").innerHTML = DATA.days.map(d => {
         <p>${esc(d.summary)}</p>
         <div class="day-meta">
           ${d.drive ? `<span class="tag drive">🚗 ${esc(d.drive)}</span>` : ""}
-          ${wxByDay[d.day] ? `<span class="tag ${popCls(wxByDay[d.day].pop)}">${esc(wxByDay[d.day].weather.split(" ")[0])} ${Math.round(wxByDay[d.day].tmin)}~${Math.round(wxByDay[d.day].tmax)}°C · 雨${wxByDay[d.day].pop}%</span>` : ""}
+          ${wxByDay[d.day] ? `<span class="tag wx-badge ${popCls(wxByDay[d.day].pop)}" data-day="${d.day}">${esc(wxByDay[d.day].weather.split(" ")[0])} ${Math.round(wxByDay[d.day].tmin)}~${Math.round(wxByDay[d.day].tmax)}°C · 雨${wxByDay[d.day].pop}%</span>` : ""}
           ${sn ? riskTag(`❄️ 雪 ${sn.snowRisk}`) + riskTag(`🧊 結冰 ${sn.iceRisk}`) : ""}
         </div>
       </div>
