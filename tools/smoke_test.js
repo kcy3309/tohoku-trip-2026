@@ -30,6 +30,8 @@ const errors = [];
     "charging tables": "#charging table",
     "map markers": ".leaf-marker",
     "route polyline": ".leaflet-overlay-pane path",
+    "weather cards": ".wx",
+    "weather day badges": ".day-meta .tag.p-high, .day-meta .tag.p-mid, .day-meta .tag.p-low",
   };
   for (const [name, sel] of Object.entries(checks)) {
     const n = await page.locator(sel).count();

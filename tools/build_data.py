@@ -17,6 +17,13 @@ def load_links() -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_weather() -> dict:
+    path = DATA_DIR / "weather.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def sheet_links(links: dict, sheet: str, row_no: int) -> dict[str, str]:
     """Hyperlinks on a 1-based xlsx row: {col_letter: url}."""
     return links.get(sheet, {}).get(str(row_no), {})
@@ -422,6 +429,7 @@ def main() -> None:
     snow, snow_keys = parse_table("snow", "日期")
     sos = parse_sos()
     charging = parse_charging()
+    weather = load_weather()
 
     data = {
         "meta": {
@@ -445,6 +453,8 @@ def main() -> None:
         "snow": snow,
         "sos": sos,
         "charging": charging,
+        "weather": weather.get("days", []),
+        "weatherFetchedAt": weather.get("fetchedAt", ""),
     }
 
     out_path = DATA_DIR / "data.json"
@@ -460,6 +470,7 @@ def main() -> None:
     map_items = sum(1 for d in days for it in d["items"] if "map" in it)
     hotel_maps = sum(1 for o in overview_days if "hotelMap" in o)
     print(f"  maps: day-items={map_items} overview-hotels={hotel_maps} spots={spot_map_hits}/{len(spots)}")
+    print(f"  weather: {len(weather.get('days', []))} days (fetchedAt={weather.get('fetchedAt', '-')})")
 
 
 if __name__ == "__main__":

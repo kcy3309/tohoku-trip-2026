@@ -205,6 +205,18 @@ tbody tr:hover{background:color-mix(in srgb,var(--ginkgo) 8%,transparent)}
 .alert p{margin:4px 0 0;font-size:.84rem;color:var(--ink2)}
 .alert .act{color:var(--ink);background:color-mix(in srgb,var(--ginkgo) 12%,transparent);border-radius:8px;padding:5px 8px;margin-top:7px;display:block;font-size:.82rem}
 .risk-low{color:var(--risk-low)}.risk-mid{color:var(--risk-mid)}.risk-high{color:var(--risk-high)}
+/* ============ weather ============ */
+.wx-note{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--moss);border-radius:0 12px 12px 0;padding:10px 14px;font-size:.85rem;color:var(--ink2);margin:0 0 14px}
+.wx-note b{color:var(--ink)}
+.wx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:10px}
+.wx{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 10px 12px;text-align:center;box-shadow:0 1px 6px var(--shadow)}
+.wx .wx-d{font-size:.72rem;color:var(--ink2);letter-spacing:.03em}
+.wx .wx-ico{font-size:1.7rem;line-height:1.3;margin:2px 0}
+.wx .wx-w{font-size:.8rem;color:var(--ink);margin-bottom:2px}
+.wx .wx-t{font-weight:900;font-variant-numeric:tabular-nums;font-size:.95rem}
+.wx .wx-p{font-size:.76rem;font-weight:700;margin-top:2px}
+.wx .wx-wind{font-size:.7rem;color:var(--ink2)}
+.p-low{color:var(--moss)}.p-mid{color:var(--amber)}.p-high{color:var(--risk-high)}
 /* ============ sos ============ */
 .hotline{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:8px;flex-wrap:wrap}
 .hotline .nm{font-weight:700}
@@ -252,7 +264,7 @@ footer .sources{margin-top:6px;font-size:.72rem;opacity:.75}
       東北紅葉自駕 2026
     </div>
     <nav class="tabs" id="tabs">
-      <a href="#overview">概覽</a><a href="#days">每日行程</a><a href="#mapsec">地圖</a>
+      <a href="#overview">概覽</a><a href="#weather">天氣</a><a href="#days">每日行程</a><a href="#mapsec">地圖</a>
       <a href="#cost">費用</a><a href="#spots">景點餐廳</a><a href="#alerts">提醒</a><a href="#sos">SOS</a>
     </nav>
     <button id="themeBtn" type="button" aria-label="切換深淺色主題"><span id="themeIcon">🌙</span><span id="themeTxt">夜楓</span></button>
@@ -274,6 +286,13 @@ footer .sources{margin-top:6px;font-size:.72rem;opacity:.75}
   <div class="tbl-wrap"><table id="ovTable"></table></div>
   <h3 style="margin:22px 0 10px;font-size:1.05rem">重要決策紀錄</h3>
   <ul class="decisions" id="decisionList"></ul>
+</section>
+
+<section id="weather">
+  <div class="sec-head"><h2>天氣預報</h2><span class="en">Weather Forecast</span></div>
+  <div class="rule"></div>
+  <div class="wx-note" id="wxNote"></div>
+  <div class="wx-grid" id="wxGrid"></div>
 </section>
 
 <section id="days">
@@ -449,6 +468,31 @@ $("#ovTable").innerHTML = `
 
 $("#decisionList").innerHTML = DATA.decisions.map(d => `<li>${nl2br(d)}</li>`).join("");
 
+/* ---------- weather ---------- */
+const wxList = DATA.weather || [];
+const wxByDay = Object.fromEntries(wxList.map(w => [w.day, w]));
+const popCls = (p) => (p >= 60 ? "p-high" : p >= 30 ? "p-mid" : "p-low");
+(function renderWeather(){
+  if (!wxList.length) {
+    $("#wxNote").innerHTML = "尚無天氣資料。執行 <b>python tools/fetch_weather.py</b> 後重新建置即可取得 Open-Meteo 12 天預報。";
+    return;
+  }
+  const fetched = DATA.weatherFetchedAt ? new Date(DATA.weatherFetchedAt) : null;
+  const fetchedStr = fetched ? fetched.toLocaleString("zh-TW", {timeZone:"Asia/Taipei", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit"}) : "—";
+  $("#wxNote").innerHTML =
+    `📡 資料來源 <b>Open-Meteo</b>（各日住宿地點座標） · 取得時間 <b>${esc(fetchedStr)}</b>（台北時間）<br>` +
+    `⚠️ 10/24 之後屬 7–14 天延伸預報、變動較大；出發前 2–3 天請再重新執行 <code>tools/fetch_weather.py</code> 更新。`;
+  $("#wxGrid").innerHTML = wxList.map(w => `
+    <div class="wx">
+      <div class="wx-d">Day ${w.day}｜${esc(w.date.slice(5).replace("-", "/"))}</div>
+      <div class="wx-ico">${esc(w.weather.split(" ")[0])}</div>
+      <div class="wx-w">${esc(w.weather.replace(/^.\s*/, ""))}<br>${esc(w.area)}</div>
+      <div class="wx-t">${Math.round(w.tmin)}~${Math.round(w.tmax)}°C</div>
+      <div class="wx-p ${popCls(w.pop)}">💧 雨 ${w.pop}%</div>
+      <div class="wx-wind">💨 ${Math.round(w.wind)} km/h${w.snow > 0 ? ` · ❄️ ${w.snow}mm` : ""}</div>
+    </div>`).join("");
+})();
+
 /* ---------- days ---------- */
 const TYPE_ICON = {"交通":"🚗","景點":"🍁","餐廳":"🍽","住宿":"🏨","體驗":"♨️","購物":"🛍","休息":"☕","還車":"🔑","抵達":"✈️","下午茶":"🍰","備用":"🔄","JR Bus":"🚌","self dinner":"🍽","晚餐":"🍽","午餐":"🍽","餐廳／購物":"🍽","景點／餐廳":"🍁","景點／購物":"🍁"};
 const itCls = (t) => t.includes("住宿") ? "hotel" : (t.includes("餐廳") || t.includes("dinner") || t.includes("下午茶") || t.includes("午餐") || t.includes("晚餐")) ? "food" : (t.includes("交通") || t.includes("JR") || t.includes("還車") || t.includes("抵達")) ? "trans" : "";
@@ -493,6 +537,7 @@ $("#dayList").innerHTML = DATA.days.map(d => {
         <p>${esc(d.summary)}</p>
         <div class="day-meta">
           ${d.drive ? `<span class="tag drive">🚗 ${esc(d.drive)}</span>` : ""}
+          ${wxByDay[d.day] ? `<span class="tag ${popCls(wxByDay[d.day].pop)}">${esc(wxByDay[d.day].weather.split(" ")[0])} ${Math.round(wxByDay[d.day].tmin)}~${Math.round(wxByDay[d.day].tmax)}°C · 雨${wxByDay[d.day].pop}%</span>` : ""}
           ${sn ? riskTag(`❄️ 雪 ${sn.snowRisk}`) + riskTag(`🧊 結冰 ${sn.iceRisk}`) : ""}
         </div>
       </div>
