@@ -10,6 +10,7 @@ html = (ROOT / "index.html").read_text(encoding="utf-8")
 
 m = re.search(r'<script id="trip-data" type="application/json">(.*?)</script>', html, re.S)
 assert m, "trip-data blob missing"
+assert "__DATA__" not in html and "__BUILD_AT__" not in html, "unreplaced placeholder"
 blob = m.group(1).replace("<\\/", "</")
 data = json.loads(blob)
 print("JSON OK. keys:", ", ".join(sorted(data.keys())))

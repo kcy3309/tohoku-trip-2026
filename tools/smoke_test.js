@@ -33,6 +33,7 @@ const errors = [];
     "weather cards": ".wx",
     "weather day badges": ".day-meta .tag.p-high, .day-meta .tag.p-mid, .day-meta .tag.p-low",
     "meal budget rows": "#mealTable tbody tr",
+    "build stamp": ".build-info b",
   };
   for (const [name, sel] of Object.entries(checks)) {
     const n = await page.locator(sel).count();

@@ -70,6 +70,9 @@ nav.tabs a.on{color:#fff;background:var(--momiji);border-color:var(--momiji)}
 .hero h1{font-family:"Zen Old Mincho",serif;font-size:clamp(1.7rem,4.4vw,2.7rem);margin:0 0 6px;letter-spacing:.04em}
 .hero h1 .koyo{color:var(--momiji)}
 .hero .sub{color:var(--ink2);font-size:1rem;margin:0 0 16px}
+.build-info{color:var(--ink2);font-size:.78rem;margin:12px 0 0}
+.build-info b{color:var(--momiji);font-variant-numeric:tabular-nums}
+[data-theme="dark"] .build-info b{color:var(--ginkgo)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
 .chip{
   background:var(--card);border:1px solid var(--line2);border-radius:22px;
@@ -279,6 +282,7 @@ footer .sources{margin-top:6px;font-size:.72rem;opacity:.75}
   <h1>日本東北<span class="koyo">紅葉</span>自駕遊</h1>
   <p class="sub" id="heroSub"></p>
   <div class="chips" id="heroChips"></div>
+  <p class="build-info">🔄 頁面更新：<b>__BUILD_AT__</b>（台北時間）</p>
 </section>
 
 <section id="overview">
