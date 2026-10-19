@@ -187,6 +187,65 @@ def parse_day(day_no: int, links: dict) -> dict:
 
 # ---------------- cost ----------------
 
+# 每人單價（JPY），依行程概覽「膳食安排」推估；included=True 表示住宿／機票已含
+MEAL_BUDGET = [
+    {"day": 1, "date": "10/20", "b": {"t": "機場／機上", "inc": True},
+     "l": {"t": "機上餐", "inc": True}, "d": {"t": "利久 牛舌", "j": 2300}},
+    {"day": 2, "date": "10/21", "b": {"t": "蘭亭（含早）", "inc": True},
+     "l": {"t": "秋保溫泉街", "j": 1300}, "d": {"t": "藏王山形牛會席（含）", "inc": True}},
+    {"day": 3, "date": "10/22", "b": {"t": "藏王（含早）", "inc": True},
+     "l": {"t": "七日町小店", "j": 1300}, "d": {"t": "角館武家屋敷", "j": 1800}},
+    {"day": 4, "date": "10/23", "b": {"t": "便利店", "j": 450},
+     "l": {"t": "鶴の湯食堂", "j": 1600}, "d": {"t": "菊富士（已訂）", "j": 4000}},
+    {"day": 5, "date": "10/24", "b": {"t": "便利店", "j": 450},
+     "l": {"t": "三忠／蕎麥", "j": 1200}, "d": {"t": "味噌咖哩拉麵", "j": 1100}},
+    {"day": 6, "date": "10/25", "b": {"t": "魚菜中心海鮮丼", "j": 1200},
+     "l": {"t": "ASPAM 周邊", "j": 1500}, "d": {"t": "回轉壽司あすか", "j": 1900}},
+    {"day": 7, "date": "10/26", "b": {"t": "便利店", "j": 450},
+     "l": {"t": "奧入瀨溪流", "j": 1500}, "d": {"t": "秋田鄉土自助（含）", "inc": True}},
+    {"day": 8, "date": "10/27", "b": {"t": "Yuze（含早）", "inc": True},
+     "l": {"t": "盛岡冷麵", "j": 1300}, "d": {"t": "民宿煮食", "j": 1500}},
+    {"day": 9, "date": "10/28", "b": {"t": "便利店", "j": 450},
+     "l": {"t": "三彩館ふじせい", "j": 1300}, "d": {"t": "前澤牛壽喜燒（含）", "inc": True}},
+    {"day": 10, "date": "10/29", "b": {"t": "絕景之館（含早）", "inc": True},
+     "l": {"t": "松島牡蠣吃到飽", "j": 3500}, "d": {"t": "松島吃蠔", "j": 3500}},
+    {"day": 11, "date": "10/30", "b": {"t": "鹽釜魚市場海鮮丼", "j": 1400},
+     "l": {"t": "仔虎燒肉（已訂）", "j": 2800}, "d": {"t": "民宿煮食", "j": 1500}},
+    {"day": 12, "date": "10/31", "b": {"t": "仙台朝市", "j": 800},
+     "l": {"t": "機場輕食", "j": 800}, "d": {"t": "回港機上餐", "inc": True}},
+]
+
+
+def build_meal_budget() -> dict:
+    rows = []
+    for m in MEAL_BUDGET:
+        def cell(e):
+            if e.get("inc"):
+                return {"t": e["t"], "inc": True, "j": 0}
+            return {"t": e["t"], "inc": False, "j": e.get("j", 0)}
+        b, l, d = cell(m["b"]), cell(m["l"]), cell(m["d"])
+        rows.append({"day": m["day"], "date": m["date"], "b": b, "l": l, "d": d,
+                     "sub": b["j"] + l["j"] + d["j"]})
+    snacks = 8000
+    per_person = sum(r["sub"] for r in rows) + snacks
+    return {
+        "rows": rows,
+        "snacks": snacks,
+        "perPerson": per_person,
+        "perPersonLow": 45000,
+        "perPersonHigh": 55000,
+        "totalLow": 140000,
+        "totalHigh": 160000,
+        "hkdLow": "HK$7,000",
+        "hkdHigh": "HK$8,000",
+        "rate": "¥1 ≈ HK$0.05",
+        "notes": [
+            "估算方式：依行程概覽「膳食安排」逐日推估每人日圓花費，取東北一般物價與已訂餐廳價位中位數；「✓ 包餐」為住宿或機票已含。",
+            "區間已含 ±10% 浮動（已訂餐廳實際帳單差異、零食咖啡多寡）；含 6 晚住宿包餐、4 天機上餐。",
+        ],
+    }
+
+
 def parse_cost() -> dict:
     rows = read_rows("cost")
     hotels, flights, rental = [], [], []
@@ -247,6 +306,7 @@ def parse_cost() -> dict:
         "totals": totals,
         "tolls": tolls,
         "tollNotes": toll_notes,
+        "meal": build_meal_budget(),
     }
 
 

@@ -177,6 +177,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--ginkgo) 8%,transparent)}
 .cost-card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--ginkgo);border-radius:14px;padding:14px 16px;box-shadow:0 2px 10px var(--shadow)}
 .cost-card:nth-child(2){border-top-color:var(--momiji)}
 .cost-card:nth-child(3){border-top-color:var(--moss)}
+.cost-card:nth-child(4){border-top-color:#6a9fb5}
 .cost-card h3{margin:0 0 4px;font-size:.92rem;color:var(--ink2);font-weight:700}
 .cost-card .big{font-size:1.6rem;font-weight:900;color:var(--amber);font-variant-numeric:tabular-nums}
 [data-theme="dark"] .cost-card .big{color:var(--ginkgo)}
@@ -318,6 +319,8 @@ footer .sources{margin-top:6px;font-size:.72rem;opacity:.75}
   <div class="rule"></div>
   <div class="cost-grid" id="costCards"></div>
   <div class="cost-note" id="costNote"></div>
+  <h3 style="font-size:1rem;margin:16px 0 8px">膳食預估（每人／日圓 · 12 天）</h3>
+  <div class="tbl-wrap"><table id="mealTable"></table></div>
   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
     <div>
       <h3 style="font-size:1rem;margin:8px 0 8px">住宿明細</h3>
@@ -627,8 +630,21 @@ initMap();
 $("#costCards").innerHTML = `
   <div class="cost-card"><h3>🏨 住宿（11 晚）</h3><div class="big">${esc(tot.hotelHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · 含早晚餐方案差異</div></div>
   <div class="cost-card"><h3>✈️ 機票（3 人）</h3><div class="big">${esc(tot.flightHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · HKG ⇄ SDJ</div></div>
-  <div class="cost-card"><h3>🚗 租車相關</h3><div class="big">${esc(tot.rentalHKDDetail || tot.rentalHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · 車資＋ETC＋保險＋旅遊保險＋雪胎＋油費</div></div>`;
+  <div class="cost-card"><h3>🚗 租車相關</h3><div class="big">${esc(tot.rentalHKDDetail || tot.rentalHKD)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · 車資＋ETC＋保險＋旅遊保險＋雪胎＋油費</div></div>
+  <div class="cost-card"><h3>🍽 膳食（3 人 · 預估）</h3><div class="big">${esc(DATA.cost.meal.hkdLow)}–${esc(DATA.cost.meal.hkdHigh)}</div><div style="color:var(--ink2);font-size:.8rem">HKD · JPY ${esc(DATA.cost.meal.totalLow.toLocaleString("en-US"))}–${esc(DATA.cost.meal.totalHigh.toLocaleString("en-US"))} · 每人約 ¥${esc(DATA.cost.meal.perPerson.toLocaleString("en-US"))}</div></div>`;
 $("#costNote").innerHTML = DATA.cost.tollNotes.map(n => `· ${esc(n)}`).join("<br>") + (tot.rentalNote ? `<br>· ${esc(tot.rentalNote)}` : "");
+const mb = DATA.cost.meal;
+const yen = (n) => "¥" + Number(n).toLocaleString("en-US");
+const mbCell = (e) => e.inc ? `${esc(e.t)} <span class="pill paid">✓ 包餐</span>` : `${esc(e.t)} <b class="num">${yen(e.j)}</b>`;
+$("#mealTable").innerHTML = `
+<thead><tr><th>Day</th><th>早餐</th><th>午餐</th><th>晚餐</th><th>小計/人</th></tr></thead>
+<tbody>${mb.rows.map(r => `
+<tr><td class="num"><b>D${r.day}</b><br><small>${esc(r.date)}</small></td><td>${mbCell(r.b)}</td><td>${mbCell(r.l)}</td><td>${mbCell(r.d)}</td><td class="num"><b>${yen(r.sub)}</b></td></tr>`).join("")}
+<tr style="font-weight:900"><td colspan="4">零食、咖啡、下午茶</td><td class="num">${yen(mb.snacks)}</td></tr>
+<tr style="font-weight:900"><td colspan="4">每人小計（區間 ${yen(mb.perPersonLow)}–${yen(mb.perPersonHigh)}）</td><td class="num">${yen(mb.perPerson)}</td></tr>
+<tr style="font-weight:900;background:color-mix(in srgb,var(--ginkgo) 8%,transparent)"><td colspan="4">3 人合計（${yen(mb.totalLow)}–${yen(mb.totalHigh)} · 匯率 ${esc(mb.rate)}）</td><td class="num"><b>${esc(mb.hkdLow)}–${esc(mb.hkdHigh)}</b></td></tr>
+${mb.notes.map(n => `<tr><td colspan="5" style="color:var(--ink2);font-size:.75rem;white-space:normal;font-weight:400">📝 ${esc(n)}</td></tr>`).join("")}
+</tbody>`;
 $("#hotelCostTable").innerHTML = `
 <thead><tr><th>Day</th><th>住宿</th><th>JPY</th><th>HKD</th></tr></thead>
 <tbody>${DATA.cost.hotels.map(h => `<tr><td class="num">${esc(h.day.replace("Day ", "D"))}</td><td>${esc(h.name)}</td><td class="num">${esc(h.jpy) || "—"}</td><td class="num money">${esc(h.hkd)}</td></tr>`).join("")}</tbody>`;

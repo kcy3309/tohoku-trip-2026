@@ -28,6 +28,13 @@ assert map_items >= 30, f"day items with map link too few: {map_items}"
 assert hotel_maps >= 5, f"overview hotels with map link too few: {hotel_maps}"
 print(f"maps OK: day-items={map_items} overview-hotels={hotel_maps} spots={spot_maps}")
 
+meal = data["cost"]["meal"]
+assert len(meal["rows"]) == 12, "meal rows != 12"
+inc = sum(1 for r in meal["rows"] for k in ("b", "l", "d") if r[k]["inc"])
+assert inc == 10, f"meal included cells != 10: {inc}"
+assert meal["perPerson"] == 48900, f"per person != 48900: {meal['perPerson']}"
+print(f"meal budget OK: rows=12 included=10 per-person=¥{meal['perPerson']:,} 3-pax={meal['hkdLow']}–{meal['hkdHigh']}")
+
 scripts = re.findall(r"<script>(.*?)</script>", html, re.S)
 assert scripts, "no inline script"
 js = ROOT / "_data" / "_check.js"
